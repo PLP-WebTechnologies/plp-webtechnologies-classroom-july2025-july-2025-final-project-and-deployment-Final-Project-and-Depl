@@ -126,7 +126,7 @@ A modern, responsive portfolio website showcasing web development skills and ser
 - Tested across multiple devices and browsers
 
 ### Part 4: Deployment 🚀
-- Ready for deployment to Netlify/Vercel/GitHub Pages
+- Deployed on netlify
 - All assets properly linked with relative paths
 - Cross-browser tested and optimized
 
@@ -139,23 +139,11 @@ A modern, responsive portfolio website showcasing web development skills and ser
 - ✅ **JavaScript Interactivity:** Form validation, animations, mobile menu
 - ✅ **Code Organization:** Clean folder structure with separated concerns
 - ✅ **Best Practices:** Commented code, meaningful file names, validation
-- ✅ **Ready for Deployment:** All assets properly linked and tested
+- ✅ **Deployed:** All assets properly linked and tested
 
 ## 🚀 Deployment Instructions
 
-This project is ready to be deployed to any static hosting service:
+This project is deployed on netlify:https://seidportfolio.netlify.app/
 
-1. **Netlify:** Drag and drop the project folder
-2. **Vercel:** Connect GitHub repository for automatic deployment
-3. **GitHub Pages:** Push to GitHub and enable Pages in repository settings
-
-## 📞 Contact
-
-For questions about this project or collaboration opportunities:
-- **Email:** alex.johnson@example.com
-- **LinkedIn:** [Alex Johnson](https://linkedin.com/in/alexjohnson)
-- **GitHub:** [github.com/alexjohnson](https://github.com/alexjohnson)
-
----
 
 *This project demonstrates proficiency in modern web development practices, responsive design, and professional code organization.*
