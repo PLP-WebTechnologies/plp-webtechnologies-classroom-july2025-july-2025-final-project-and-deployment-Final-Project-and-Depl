@@ -1,4 +1,4 @@
-# 🌐 Alex Johnson - Portfolio Website
+# 🌐 Seid Muhidin - Portfolio Website
 
 A modern, responsive portfolio website showcasing web development skills and services. Built with HTML5, CSS3, and JavaScript following best practices for performance and accessibility.
 
