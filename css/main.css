@@ -1,0 +1,31 @@
+/* General image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Gallery images */
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Service page images */
+.services img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  margin: 15px;
+}
+
+/* About page profile/team images */
+.about img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
