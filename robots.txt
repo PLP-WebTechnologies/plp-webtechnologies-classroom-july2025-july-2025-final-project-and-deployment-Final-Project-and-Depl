@@ -1,0 +1,37 @@
+# BistroDelight Restaurant - Robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bistrodelight.co.ke/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow sensitive areas (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow specific important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /menu.html
+Allow: /gallery.html
+Allow: /contact.html
+
+# Allow CSS and JS files for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Allow favicon and other assets
+Allow: /favicon.ico
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$

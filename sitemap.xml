@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://bistrodelight.co.ke/</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80</image:loc>
+            <image:title>BistroDelight Restaurant Interior</image:title>
+            <image:caption>Elegant dining atmosphere at BistroDelight</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- About Page -->
+    <url>
+        <loc>https://bistrodelight.co.ke/about.html</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80</image:loc>
+            <image:title>Chef Marcus Delacroix</image:title>
+            <image:caption>Our head chef preparing signature dishes</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Menu Page -->
+    <url>
+        <loc>https://bistrodelight.co.ke/menu.html</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80</image:loc>
+            <image:title>Gourmet Menu Items</image:title>
+            <image:caption>Exquisite dishes from our menu</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Gallery Page -->
+    <url>
+        <loc>https://bistrodelight.co.ke/gallery.html</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80</image:loc>
+            <image:title>Food Gallery</image:title>
+            <image:caption>Professional food photography showcase</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Contact Page -->
+    <url>
+        <loc>https://bistrodelight.co.ke/contact.html</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80</image:loc>
+            <image:title>BistroDelight Restaurant Exterior</image:title>
+            <image:caption>Visit us at Westlands Square, Nairobi</image:caption>
+        </image:image>
+    </url>
+    
+</urlset>

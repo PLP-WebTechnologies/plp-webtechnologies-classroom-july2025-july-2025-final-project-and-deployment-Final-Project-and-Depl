@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BistroDelight Menu - Explore our exquisite culinary offerings">
+    <title>Menu - BistroDelight</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><i class="fas fa-utensils"></i> BistroDelight</h1>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link active"><i class="fas fa-utensils"></i> Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menu Hero Section -->
+    <section class="menu-hero">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Our Culinary Menu</h1>
+                <p class="section-subtitle">Discover our carefully crafted dishes made with the finest ingredients</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-section">
+        <div class="container">
+            <!-- Menu Filter Buttons -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all"><i class="fas fa-utensils"></i> All Dishes</button>
+                <button class="filter-btn" data-filter="starters"><i class="fas fa-leaf"></i> Starters</button>
+                <button class="filter-btn" data-filter="mains"><i class="fas fa-drumstick-bite"></i> Main Courses</button>
+                <button class="filter-btn" data-filter="desserts"><i class="fas fa-ice-cream"></i> Desserts</button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-grid">
+                <!-- Starters -->
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Truffle Arancini" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Truffle Arancini</h3>
+                        <p class="menu-description">Crispy risotto balls filled with truffle and parmesan, served with garlic aioli</p>
+                        <span class="menu-price">$14</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Seared Scallops" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Seared Scallops</h3>
+                        <p class="menu-description">Pan-seared scallops with cauliflower purée and pancetta crisps</p>
+                        <span class="menu-price">$18</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Burrata Caprese" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Burrata Caprese</h3>
+                        <p class="menu-description">Fresh burrata with heirloom tomatoes, basil oil, and aged balsamic reduction</p>
+                        <span class="menu-price">$16</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tuna Tartare" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Tuna Tartare</h3>
+                        <p class="menu-description">Yellowfin tuna with avocado, cucumber, and sesame-soy dressing</p>
+                        <span class="menu-price">$22</span>
+                    </div>
+                </div>
+
+                <!-- Main Courses -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Beef Tenderloin" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Beef Tenderloin</h3>
+                        <p class="menu-description">Prime cut beef with truffle sauce, roasted potatoes, and grilled asparagus</p>
+                        <span class="menu-price">$42</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Pan-Seared Salmon" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Pan-Seared Salmon</h3>
+                        <p class="menu-description">Fresh Atlantic salmon with herb butter, seasonal vegetables, and lemon risotto</p>
+                        <span class="menu-price">$28</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Duck Confit" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Duck Confit</h3>
+                        <p class="menu-description">Slow-cooked duck leg with cherry gastrique and roasted root vegetables</p>
+                        <span class="menu-price">$36</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Lobster Risotto" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Lobster Risotto</h3>
+                        <p class="menu-description">Creamy arborio rice with fresh lobster, saffron, and microgreens</p>
+                        <span class="menu-price">$38</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Rack of Lamb" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Rack of Lamb</h3>
+                        <p class="menu-description">Herb-crusted lamb with rosemary jus, garlic mashed potatoes, and seasonal vegetables</p>
+                        <span class="menu-price">$44</span>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Chocolate Soufflé" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Chocolate Soufflé</h3>
+                        <p class="menu-description">Rich dark chocolate soufflé with vanilla ice cream and berry compote</p>
+                        <span class="menu-price">$16</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Crème Brûlée" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Crème Brûlée</h3>
+                        <p class="menu-description">Classic vanilla custard with caramelized sugar and fresh berries</p>
+                        <span class="menu-price">$12</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tiramisu" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Tiramisu</h3>
+                        <p class="menu-description">Traditional Italian dessert with espresso-soaked ladyfingers and mascarpone</p>
+                        <span class="menu-price">$14</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Lemon Tart" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Lemon Tart</h3>
+                        <p class="menu-description">Tangy lemon curd in buttery pastry shell with candied lemon and mint</p>
+                        <span class="menu-price">$13</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Chocolate Lava Cake" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-name">Chocolate Lava Cake</h3>
+                        <p class="menu-description">Warm chocolate cake with molten center, served with vanilla bean ice cream</p>
+                        <span class="menu-price">$15</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="section-cta">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-calendar-alt"></i> Make a Reservation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title"><i class="fas fa-utensils"></i> BistroDelight</h3>
+                    <p class="footer-description">
+                        Where every meal is a celebration of flavor, craftsmanship, and hospitality.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Westlands Square, Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 720 123 456</p>
+                        <p><i class="fas fa-envelope"></i> info@bistrodelight.co.ke</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Hours</h4>
+                    <div class="hours-info">
+                        <p><strong>Mon-Thu:</strong> 5:00 PM - 10:00 PM</p>
+                        <p><strong>Fri-Sat:</strong> 5:00 PM - 11:00 PM</p>
+                        <p><strong>Sunday:</strong> 4:00 PM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BistroDelight. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

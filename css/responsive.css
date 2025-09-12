@@ -1,0 +1,604 @@
+/* =========================
+   RESPONSIVE DESIGN
+   Mobile-first responsive styles
+========================= */
+
+/* Tablet Styles - 768px and below */
+@media screen and (max-width: 768px) {
+
+    /* Icon adjustments for mobile */
+    .nav-link i {
+        margin-right: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    .btn i {
+        margin-right: 0.4rem;
+    }
+
+    .stat-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .contact-info i {
+        margin-right: 0.6rem;
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hero Carousel Section */
+    .hero-carousel {
+        height: 80vh;
+        margin-top: 70px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    /* Carousel Navigation */
+    .carousel-nav {
+        padding: 0 1rem;
+    }
+
+    .carousel-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .carousel-indicators {
+        bottom: 1rem;
+        gap: 0.8rem;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Typography */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Featured Dishes */
+    .dishes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* About Preview */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .about-text .section-title {
+        text-align: center;
+    }
+
+    .about-stats {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* About Page Tablet Styles */
+    .about-hero {
+        height: 80vh;
+        min-height: 600px;
+    }
+
+    .about-hero .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .about-hero .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-stats {
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .story-image img {
+        height: 400px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .chef-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .chef-image img {
+        height: 500px;
+    }
+
+    .chef-name {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile Styles - 480px and below */
+@media screen and (max-width: 480px) {
+    
+    /* Global */
+    :root {
+        --container-padding: 0 15px;
+        --section-padding: 60px 0;
+    }
+
+    /* Navigation */
+    .nav-logo h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Typography */
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Featured Dishes */
+    .dish-card {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+
+    .dish-content {
+        padding: 1rem;
+    }
+
+    .dish-name {
+        font-size: 1.2rem;
+    }
+
+    /* About Stats */
+    .about-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-content {
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .social-link {
+        font-size: 1.8rem;
+    }
+
+    /* Mobile icon adjustments */
+    .btn i {
+        margin-right: 0.3rem;
+    }
+
+    .nav-logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav-logo i {
+        font-size: 1.1rem;
+    }
+
+    .stat-icon {
+        font-size: 1.2rem;
+    }
+
+    .social-link i {
+        font-size: 1rem;
+    }
+
+    /* Mobile Hero Carousel */
+    .hero-carousel {
+        height: 70vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .carousel-nav {
+        padding: 0 0.5rem;
+    }
+
+    .carousel-indicators {
+        bottom: 0.5rem;
+        gap: 0.6rem;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .slide-overlay {
+        background: linear-gradient(
+            135deg,
+            rgba(60, 36, 21, 0.9) 0%,
+            rgba(60, 36, 21, 0.7) 50%,
+            rgba(0, 0, 0, 0.6) 100%
+        );
+    }
+
+    /* About Page Mobile Styles */
+    .about-hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    .about-hero .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .about-hero .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .hero-stat {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-stat .stat-number {
+        font-size: 2rem;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .story-image {
+        order: -1;
+    }
+
+    .story-image img {
+        height: 300px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .value-card {
+        padding: 2rem;
+    }
+
+    .chef-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .chef-image {
+        order: -1;
+    }
+
+    .chef-image img {
+        height: 400px;
+    }
+
+    .chef-name {
+        font-size: 2rem;
+    }
+
+    .chef-credentials {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chef-quote {
+        padding: 1.5rem;
+    }
+
+    .chef-quote p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large Desktop Styles - 1200px and above */
+@media screen and (min-width: 1200px) {
+    
+    /* Hero Section */
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    /* Typography */
+    .section-title {
+        font-size: 3rem;
+    }
+
+    /* Featured Dishes */
+    .dishes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* About Preview */
+    .about-content {
+        gap: 5rem;
+    }
+
+    .about-image img {
+        height: 500px;
+    }
+}
+
+/* Extra Large Desktop - 1400px and above */
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .nav-container {
+        max-width: 1400px;
+    }
+}
+
+/* High DPI / Retina Display Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-image img,
+    .dish-image img,
+    .about-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1a1a1a;
+        --light-gray: #2a2a2a;
+        --dark-gray: #e0e0e0;
+        --medium-gray: #b0b0b0;
+    }
+
+    .header {
+        background-color: rgba(26, 26, 26, 0.95);
+    }
+
+    .dish-card {
+        background-color: var(--light-gray);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .hero-buttons,
+    .section-cta,
+    .footer {
+        display: none;
+    }
+
+    .hero {
+        margin-top: 0;
+        min-height: auto;
+        page-break-after: always;
+    }
+
+    .section-title {
+        color: #000;
+    }
+
+    .dish-card,
+    .about-content {
+        break-inside: avoid;
+    }
+}
+
+/* Focus Styles for Accessibility */
+.nav-link:focus,
+.btn:focus,
+.social-link:focus {
+    outline: 2px solid var(--primary-gold);
+    outline-offset: 2px;
+}
+
+/* Hover Effects for Touch Devices */
+@media (hover: hover) {
+    .dish-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
