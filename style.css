@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+  border-bottom: 2px solid yellow;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0078ff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea, form button {
+  margin: 8px 0;
+  padding: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 10px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
