@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Galaxy Design Studio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #00f7ff;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #00f7ff;
+      text-shadow: 0 0 10px #00f7ff;
+      animation: glow 2s infinite alternate;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00f7ff;
+      text-shadow: 0 0 10px #00f7ff;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    #home {
+      background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #about {
+      background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #contact {
+      background: url('https://images.unsplash.com/photo-1447433819943-74a20887a81e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #ff00ff;
+    }
+
+    p {
+      max-width: 600px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      text-shadow: 0 0 5px #000;
+    }
+
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    form input, form textarea {
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: 1px solid #00f7ff;
+    }
+
+    form button {
+      background: #00f7ff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #ff00ff;
+      color: #fff;
+      box-shadow: 0 0 15px #ff00ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border-top: 1px solid #00f7ff;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00f7ff; }
+      to { text-shadow: 0 0 20px #ff00ff; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Neon Galaxy</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to Neon Galaxy Designs</h2>
+    <p>We bring futuristic, glowing, and stellar designs that shine like galaxies. Explore creativity beyond the stars.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Neon Galaxy Design Studio specializes in creating visually stunning, galaxy-themed, neon-lit designs for web, mobile, and branding. Our team blends art and technology to craft unforgettable experiences.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Neon Galaxy Design Studio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth fade-in animation on scroll
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.style.opacity = 1;
+          section.style.transform = 'translateY(0)';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
