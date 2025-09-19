@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Asmamaw Yismaw — Software & Backend Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo" aria-hidden="true">AY</div>
+          <div>
+            <div class="name">Asmamaw Yismaw</div>
+            <div class="muted">Backend-focused developer • Customer Support Engineer</div>
+          </div>
+        </div>
+        <div class="navlinks">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="intro card fade">
+        <div class="profile">
+          <img src="avatar.png" alt="Asmamaw Yismaw" />
+          <div>
+            <h1>Asmamaw Yismaw</h1>
+            <div class="muted">Passionate about backend technologies ( .NET, Python, PHP, Node.js )</div>
+            <div class="small">Based in Bahir Dar, Ethiopia · Born Apr 5, 1991</div>
+          </div>
+        </div>
+
+        <p class="lead">
+          I'm passionate about technology, especially computer programming, and hold a Bachelor's Degree in Computer Science. I completed the 12-month ALX SE Program and joined the Gold Fellowship. I'm seeking backend developer opportunities where I can contribute to meaningful projects.
+        </p>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="Europass Asmamaw-Yismaw- CV-Resume.pdf" target="_blank">Download Resume</a>
+          <button class="btn btn-ghost" onclick="scrollToContact()">Contact</button>
+        </div>
+
+        <div class="small">Email: <strong>asmeyb@gmail.com</strong> · Phone: <strong>+251 0918158861</strong></div>
+
+        <div class="socials small">
+          <a href="https://linkedin.com/in/asmeyb" target="_blank">LinkedIn</a> ·
+          <a href="https://facebook.com/asmeyb" target="_blank">Facebook</a> ·
+          WhatsApp: <span class="muted">+251918158861</span>
+        </div>
+      </div>
+
+      <aside class="card fade delay">
+        <h3>Quick facts</h3>
+        <div class="muted">Passport: EP7091548 · Nationality: Ethiopian</div>
+        <div class="skills">
+          <div class="skill">.NET</div>
+          <div class="skill">Python</div>
+          <div class="skill">Node.js</div>
+          <div class="skill">PHP</div>
+          <div class="skill">SQL</div>
+          <div class="skill">System Admin</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Work experience</h2>
+      <div class="grid-2">
+        <div class="card experience fade">
+          <div class="job">
+            <h4>CUSTOMER SUPPORT ENGINEER II — Moti Engineering PLC</h4>
+            <div class="meta">Bahir Dar · 2020 — Current</div>
+            <ul class="bullets">
+              <li>Provide technical support via phone, email, and chat; raised customer satisfaction to ~85%.</li>
+              <li>Resolve technical problems quickly (targets under 24 hours) and collaborate across teams.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h4>SYSTEM ADMINISTRATOR — ANRS Secretariat Office</h4>
+            <div class="meta">Bahir Dar · 2020</div>
+            <ul class="bullets">
+              <li>Installed, configured and maintained ERP/HRMS systems; reduced errors by ~75%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card fade">
+          <h3>Recommendations</h3>
+          <div class="recommendation">
+            <strong>Mesfin Tsegaye — Branch Manager</strong>
+            <p class="small">"Asmamaw has been providing our organization with high-quality IT support… reliable, detail-oriented, and a great problem solver."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card fade">
+        <p class="small muted">BSc. in Computer Science — Wollo University (2009 — 2013)</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid-2">
+        <div class="card fade">
+          <h3>Get in touch</h3>
+          <form id="contactForm">
+            <label for="name">Name</label>
+            <input id="name" type="text" required />
+
+            <label for="email">Email</label>
+            <input id="email" type="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required></textarea>
+
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <div id="formStatus" class="muted small"></div>
+          </form>
+        </div>
+
+        <div class="card fade delay">
+          <h3>Location & links</h3>
+          <p class="small muted">Bahir Dar, Ethiopia</p>
+          <p class="small">
+            <a href="https://linkedin.com/in/asmeyb" target="_blank">LinkedIn</a> ·
+            <a href="https://facebook.com/asmeyb" target="_blank">Facebook</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <strong>Asmamaw Yismaw</strong> — Built with HTML, CSS & JavaScript
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
