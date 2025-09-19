@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone - Watch TV Shows Online, Watch Movies Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/netflix/netflix.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Hero Section -->
+    <div class="hero-bg">
+        <header class="container mx-auto max-w-7xl px-6 sm:px-12 lg:px-24 py-6">
+            <div class="flex items-center justify-between">
+                <svg viewBox="0 0 111 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="logo"><g><path d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"></path></g></svg>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <select class="bg-black bg-opacity-70 border border-white/50 rounded py-1 pl-8 pr-4 text-white appearance-none">
+                            <option>English</option>
+                            <option>Spanish</option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-lang h-6 w-6 absolute -translate-y-1/2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7668 5.33333L10.5038 5.99715L9.33974 8.9355L8.76866 10.377L7.33333 14H9.10751L9.83505 12.0326H13.4217L14.162 14H16L12.5665 5.33333H10.8278H10.7668ZM10.6186 9.93479L10.3839 10.5632H11.1036H12.8856L11.6348 7.2136L10.6186 9.93479ZM9.52722 4.84224C9.55393 4.77481 9.58574 4.71045 9.62211 4.64954H6.41909V2H4.926V4.64954H0.540802V5.99715H4.31466C3.35062 7.79015 1.75173 9.51463 0 10.4283C0.329184 10.7138 0.811203 11.2391 1.04633 11.5931C2.55118 10.6795 3.90318 9.22912 4.926 7.57316V12.6667H6.41909V7.51606C6.81951 8.15256 7.26748 8.76169 7.7521 9.32292L8.31996 7.88955C7.80191 7.29052 7.34631 6.64699 6.9834 5.99715H9.06968L9.52722 4.84224Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <a href="#" class="bg-[#e50914] hover:bg-[#c11119] text-white font-semibold py-1.5 px-4 rounded text-sm sm:text-base !leading-tight">Sign In</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center flex items-center justify-center min-h-[480px] lg:min-h-[550px]">
+            <div class="py-16 sm:py-24">
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold max-w-2xl mx-auto">Unlimited movies, TV shows and more</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl mt-4">Starts at $30. Cancel at any time.</p>
+                <p class="text-base mt-6">Ready to watch? Enter your email to create or restart your membership.</p>
+
+                <form class="mt-6 max-w-xl mx-auto flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-2">
+                    <div class="relative w-full form-input-container">
+                        <input id="email" type="email" placeholder=" " class="w-full bg-black bg-opacity-70 border border-white/50 rounded px-4 py-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white" />
+                        <label for="email" class="absolute left-4 top-1/2 text-gray-400 pointer-events-none">Email address</label>
+                    </div>
+                    <button type="submit" class="bg-[#e50914] hover:bg-[#c11119] text-white font-bold text-xl flex items-center justify-center gap-2 lg:text-2xl px-6 py-3 rounded flex-shrink-0 w-full sm:w-auto">
+                        Get Started <i class="ph ph-caret-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-curve-wrapper">
+        <div class="curve-container">
+            <div class="banner-curve"></div>
+        </div>
+    </div>
+
+    <!-- Trending Now Section -->
+    <section class="relative">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-24">
+            <h2 class="text-lg md:text-2xl font-extrabold mb-4">Trending Now</h2>
+            <div class="swiper-container trending-swiper overflow-hidden">
+                <ul class="swiper-wrapper">
+
+                    <li class="list-item-wrapper swiper-slide">
+                        <button class="card-btn">
+                            <div class="poster">
+                                <span class="poster-bg" style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4TWo23O5AQ99gGP3qRWFuxM3VSWtqLTVAfFBaMMVoXgOw_jAxbGWdxh40dcD1VEzpoJw&usqp=CAU)"></span>
+                                Beauty in Black
+                            </div>
+                            <span class="rank-number">
+                                <span>
+                                    <span data-content="1" class="rank-inner">1</span>
+                                </span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="list-item-wrapper swiper-slide">
+                        <button class="card-btn">
+                            <div class="poster">
+                                <span class="poster-bg" style="background-image:url(https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/netflix/wednesday.webp)"></span>
+                                Wednesday
+                            </div>
+                            <span class="rank-number">
+                                <span>
+                                    <span data-content="2" class="rank-inner">2</span>
+                                </span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="list-item-wrapper swiper-slide">
+                        <button class="card-btn">
+                            <div class="poster">
+                                <span class="poster-bg" style="background-image:url( https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBxpK0CWAYAXrI5yw62Gi-tn07yPi1nF0o3EcLF8Am8Ctvs4WVU3TI9sHqZWP2QuobnJc&usqp=CAU)"></span>   
+                                Ginny and Georgia
+                            </div>
+                            <span class="rank-number">
+                                <span>
+                                    <span data-content="3" class="rank-inner">3</span>
+                                </span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="list-item-wrapper swiper-slide">
+                        <button class="card-btn">
+                            <div class="poster">
+                                <span class="poster-bg" style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpdKI1C-P7ewKDvRj71ME1J0Csxf_5aM_gwg&s)"></span>
+                                Peaky Blinders
+                            </div>
+                            <span class="rank-number">
+                                <span>
+                                    <span data-content="4" class="rank-inner">4</span>
+                                </span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="list-item-wrapper swiper-slide">
+                        <button class="card-btn">
+                            <div class="poster">
+                                <span class="poster-bg" style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn3q18eP0FdFx5BSmOG8kblXut7WcCxeFapb7eI6uNQ_OspJFKziZ55LOrnO5bUB4HDd8&usqp=CAU)"></span>
+                                Bojack Horseman
+                            </div>
+                            <span class="rank-number">
+                                <span>
+                                    <span data-content="5" class="rank-inner">5</span>
+                                </span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="list-item-wrapper swiper-slide">
+                        <button class="card-btn">
+                            <div class="poster">
+                                <span class="poster-bg" style="background-image:url(https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/netflix/squid-game.webp)"></span>
+                                Squid Game
+                            </div>
+                            <span class="rank-number">
+                                <span>
+                                    <span data-content="6" class="rank-inner">6</span>
+                                </span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="list-item-wrapper swiper-slide">
+                        <button class="card-btn">
+                            <div class="poster">
+                                <span class="poster-bg" style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6zlhH18lJ4K739ZkpqoP5XM-RrH9P5DjScg&s)"></span>
+                                Entergalactic
+                            </div>
+                            <span class="rank-number">
+                                <span>
+                                    <span data-content="7" class="rank-inner">7</span>
+                                </span>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            <!-- Swiper Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- More reasons to join Section -->
+    <section class="py-12 sm:py-16 lg:py-20">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-24">
+            <h2 class="text-lg md:text-2xl font-extrabold mb-4">More reasons to join</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-[#1a1a1a] p-6 rounded-lg gradient-bg">
+                    <h3 class="text-2xl font-bold mb-2">Enjoy on your TV</h3>
+                    <p class="text-base text-gray-300">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                </div>
+                <div class="bg-[#1a1a1a] p-6 rounded-lg gradient-bg">
+                    <h3 class="text-2xl font-bold mb-2">Download your shows to watch offline</h3>
+                    <p class="text-base text-gray-300">Save your favourites easily and always have something to watch.</p>
+                </div>
+                 <div class="bg-[#1a1a1a] p-6 rounded-lg gradient-bg">
+                    <h3 class="text-2xl font-bold mb-2">Watch everywhere</h3>
+                    <p class="text-base text-gray-300">Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+                </div>
+                 <div class="bg-[#1a1a1a] p-6 rounded-lg gradient-bg">
+                    <h3 class="text-2xl font-bold mb-2">Create profiles for kids</h3>
+                    <p class="text-base text-gray-300">Send kids on adventures with their favourite characters in a space made just for them—free with your membership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-24">
+            <h2 class="text-lg md:text-2xl font-extrabold mb-4">Frequently Asked Questions</h2>
+            <div class="space-y-2">
+
+                <button class="faq-question w-full text-left bg-[#2d2d2d] p-6 flex justify-between items-center">
+                    <span class="text-xl sm:text-2xl">What is Netflix?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </button>
+                <div class="faq-answer bg-[#2d2d2d] px-6 text-xl sm:text-2xl">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                    <p class="mt-4">You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </div>
+
+                <button class="faq-question w-full text-left bg-[#2d2d2d] p-6 flex justify-between items-center">
+                    <span class="text-xl sm:text-2xl">How much does Netflix cost?</span>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </button>
+                <div class="faq-answer bg-[#2d2d2d] px-6 text-xl sm:text-2xl">
+                     <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
+                </div>
+
+                 <button class="faq-question w-full text-left bg-[#2d2d2d] p-6 flex justify-between items-center">
+                    <span class="text-xl sm:text-2xl">Where can I watch?</span>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </button>
+                <div class="faq-answer bg-[#2d2d2d] px-6 text-xl sm:text-2xl">
+                     <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+                     <p class="mt-4">You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                </div>
+
+                <button class="faq-question w-full text-left bg-[#2d2d2d] p-6 flex justify-between items-center">
+                    <span class="text-xl sm:text-2xl">How do I cancel?</span>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </button>
+                <div class="faq-answer bg-[#2d2d2d] px-6 text-xl sm:text-2xl">
+                     <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                </div>
+
+                <button class="faq-question w-full text-left bg-[#2d2d2d] p-6 flex justify-between items-center">
+                    <span class="text-xl sm:text-2xl">What can I watch on Netflix?</span>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </button>
+                <div class="faq-answer bg-[#2d2d2d] px-6 text-xl sm:text-2xl">
+                     <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                </div>
+
+                <button class="faq-question w-full text-left bg-[#2d2d2d] p-6 flex justify-between items-center">
+                    <span class="text-xl sm:text-2xl">Is Netflix good for kids?</span>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </button>
+                <div class="faq-answer bg-[#2d2d2d] px-6 text-xl sm:text-2xl">
+                     <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.</p>
+                     <p class="mt-4">Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+                </div>
+            </div>
+
+             <p class="text-base mt-16 text-center">Ready to watch? Enter your email to create or restart your membership.</p>
+             <form class="mt-4 max-w-3xl mx-auto flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-2">
+                <div class="relative w-full form-input-container">
+                    <input id="email-bottom" type="email" placeholder=" " class="w-full bg-black bg-opacity-70 border border-white/50 rounded px-4 py-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white" />
+                    <label for="email-bottom" class="absolute left-4 top-1/2 text-gray-400 pointer-events-none">Email address</label>
+                </div>
+                <button type="submit" class="bg-[#e50914] hover:bg-[#c11119] text-white font-bold text-xl flex items-center justify-center gap-2 lg:text-2xl px-6 py-3 rounded flex-shrink-0 w-full sm:w-auto !leading-snug">
+                    Get Started <i class="ph ph-caret-right"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12">
+        <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-gray-400">
+            <p class="mb-8">Questions? Call <a href="tel:000-800-919-1742" class="hover:underline">000-800-919-1742</a></p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-sm">
+                <a href="#" class="hover:underline">FAQ</a>
+                <a href="#" class="hover:underline">Help Centre</a>
+                <a href="#" class="hover:underline">Account</a>
+                <a href="#" class="hover:underline">Media Centre</a>
+                <a href="#" class="hover:underline">Investor Relations</a>
+                <a href="#" class="hover:underline">Jobs</a>
+                <a href="#" class="hover:underline">Ways to Watch</a>
+                <a href="#" class="hover:underline">Terms of Use</a>
+                <a href="#" class="hover:underline">Privacy</a>
+                <a href="#" class="hover:underline">Cookie Preferences</a>
+                <a href="#" class="hover:underline">Corporate Information</a>
+                <a href="#" class="hover:underline">Contact Us</a>
+                <a href="#" class="hover:underline">Speed Test</a>
+                <a href="#" class="hover:underline">Legal Notices</a>
+                <a href="#" class="hover:underline">Only on Netflix</a>
+            </div>
+            <div class="mt-8 relative inline-block">
+                <select class="bg-black border border-white/50 rounded py-1 pl-8 pr-4 text-white appearance-none">
+                    <option>English</option>
+                    <option>Spanish</option>
+                </select>
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-lang h-6 w-6 absolute -translate-y-1/2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7668 5.33333L10.5038 5.99715L9.33974 8.9355L8.76866 10.377L7.33333 14H9.10751L9.83505 12.0326H13.4217L14.162 14H16L12.5665 5.33333H10.8278H10.7668ZM10.6186 9.93479L10.3839 10.5632H11.1036H12.8856L11.6348 7.2136L10.6186 9.93479ZM9.52722 4.84224C9.55393 4.77481 9.58574 4.71045 9.62211 4.64954H6.41909V2H4.926V4.64954H0.540802V5.99715H4.31466C3.35062 7.79015 1.75173 9.51463 0 10.4283C0.329184 10.7138 0.811203 11.2391 1.04633 11.5931C2.55118 10.6795 3.90318 9.22912 4.926 7.57316V12.6667H6.41909V7.51606C6.81951 8.15256 7.26748 8.76169 7.7521 9.32292L8.31996 7.88955C7.80191 7.29052 7.34631 6.64699 6.9834 5.99715H9.06968L9.52722 4.84224Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <p class="mt-8 text-sm">Netflix USA</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the language select (header)
+    const langSelect = document.querySelector('header select');
+    // Map of English to Spanish translations
+    const translations = {
+        "Unlimited movies, TV shows and more": "Películas, series y mucho más, sin límites",
+        "Starts at $30. Cancel at any time.": "Desde $30. Cancela en cualquier momento.",
+        "Ready to watch? Enter your email to create or restart your membership.": "¿Listo para ver? Ingresa tu correo electrónico para crear o reiniciar tu membresía.",
+        "Get Started": "Comenzar",
+        "Trending Now": "Tendencias",
+        "More reasons to join": "Más razones para unirte",
+        "Enjoy on your TV": "Disfruta en tu TV",
+        "Download your shows to watch offline": "Descarga tus series para verlas sin conexión",
+        "Watch everywhere": "Mira en todas partes",
+        "Create profiles for kids": "Crea perfiles para niños",
+        "Frequently Asked Questions": "Preguntas frecuentes",
+        "What is Netflix?": "¿Qué es Netflix?",
+        "How much does Netflix cost?": "¿Cuánto cuesta Netflix?",
+        "Where can I watch?": "¿Dónde puedo ver?",
+        "How do I cancel?": "¿Cómo cancelo?",
+        "What can I watch on Netflix?": "¿Qué puedo ver en Netflix?",
+        "Is Netflix good for kids?": "¿Netflix es bueno para niños?",
+        "Questions? Call": "¿Preguntas? Llama al",
+        "Netflix USA": "Netflix EE.UU.",
+        "Email address": "Correo electrónico"
+     
+    };
+
+    function translateToSpanish() {
+        // Translate all elements with matching text
+        Object.keys(translations).forEach(eng => {
+            // Find all elements containing the English text
+            document.querySelectorAll('*').forEach(el => {
+                if (el.childNodes.length === 1 && el.textContent.trim() === eng) {
+                    el.textContent = translations[eng];
+                }
+                // For input placeholders and labels
+                if (el.placeholder === eng) {
+                    el.placeholder = translations[eng];
+                }
+                if (el.tagName === "LABEL" && el.textContent.trim() === eng) {
+                    el.textContent = translations[eng];
+                }
+            });
+        });
+    }
+
+    function translateToEnglish() {
+        // Reverse translation
+        Object.entries(translations).forEach(([eng, esp]) => {
+            document.querySelectorAll('*').forEach(el => {
+                if (el.childNodes.length === 1 && el.textContent.trim() === esp) {
+                    el.textContent = eng;
+                }
+                if (el.placeholder === esp) {
+                    el.placeholder = eng;
+                }
+                if (el.tagName === "LABEL" && el.textContent.trim() === esp) {
+                    el.textContent = eng;
+                }
+            });
+        });
+    }
+
+    langSelect.addEventListener('change', function() {
+        if (langSelect.value === "Spanish") {
+            translateToSpanish();
+        } else {
+            translateToEnglish();
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+.hero-bg {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0,
+      rgba(0, 0, 0, 0.4) 60%,
+      rgba(0, 0, 0, 0.9) 100%
+    ),
+    url('https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/netflix/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.faq-question {
+  transition: background-color 0.3s ease;
+}
+.faq-question:hover {
+  background-color: #4a4a4a;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+.faq-question.open + .faq-answer {
+  max-height: 1200px; 
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.faq-question svg {
+  transition: transform 0.3s ease;
+}
+.faq-question.open svg {
+  transform: rotate(45deg);
+}
+.form-input-container label {
+  transform: translateY(-50%);
+  transition: all 0.2s ease-out;
+}
+.form-input-container input:focus + label,
+.form-input-container input:not(:placeholder-shown) + label {
+  top: 0.5rem;
+  transform: translateY(0) scale(0.75);
+  font-weight: 600;
+}
+.category-row::-webkit-scrollbar {
+  display: none; 
+}
+.category-row {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.trending-swiper .swiper-slide {
+  width: auto;
+}
+.trending-swiper .swiper-button-next,
+.trending-swiper .swiper-button-prev {
+  height: 7.5rem;
+  width: 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.trending-swiper .swiper-button-next:hover,
+.trending-swiper .swiper-button-prev:hover {
+  background-color: rgba(20, 20, 20, 0.9);
+}
+.trending-swiper .swiper-button-next:after,
+.trending-swiper .swiper-button-prev:after {
+  font-size: 16px;
+  font-weight: 600;
+}
+.swiper-button-disabled {
+  display: none !important;
+}
+
+.logo {
+  width: 9.25rem;
+  height: 2.5rem;
+  color: rgb(229, 9, 20);
+  fill: currentColor;
+  display: block;
+}
+
+@media screen and (max-width: 959.98px) {
+  .logo {
+    width: 5.5625rem;
+    height: 1.5rem;
+  }
+}
+
+.svg-lang {
+  top: 58%;
+  left: 0.8rem;
+}
+
+.gradient-bg {
+  background: linear-gradient(149deg, #192247 0%, #210e17 99.08%);
+}
+
+.banner-curve-wrapper {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  height: 6.25rem;
+  z-index: 1;
+}
+
+.banner-curve {
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  border: solid 0.25rem transparent;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  border-bottom: none;
+  background: radial-gradient(
+      50% 500% at 50% -420%,
+      rgba(64, 97, 231, 0.4) 80%,
+      rgba(0, 0, 0, 0.1) 100%
+  ), black;
+  background-clip: padding-box;
+}
+
+@media all {
+  .banner-curve {
+      width: 200%;
+      left: -50%;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .banner-curve {
+      width: 180%;
+      left: -40%;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .banner-curve {
+      width: 150%;
+      left: -25%;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .banner-curve {
+      width: 130%;
+      left: -15%;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .banner-curve {
+      width: 120%;
+      left: -10%;
+  }
+}
+
+.banner-curve:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin-top: -0.25rem;
+  border-radius: inherit;
+  background: linear-gradient(
+      to right,
+      rgba(33, 13, 22, 1) 16%,
+      rgba(184, 40, 105, 1),
+      rgba(229, 9, 20, 1),
+      rgba(184, 40, 105, 1),
+      rgba(33, 13, 22, 1) 84%
+  );
+}
+
+/* List Item Wrapper */
+.list-item-wrapper {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: flex;
+}
+
+@media all {
+  .list-item-wrapper {
+      scroll-margin-inline-start: 2.3rem;
+      padding: 0.3rem 0.625rem;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .list-item-wrapper {
+      scroll-margin-inline-start: 2.4rem;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .list-item-wrapper {
+      padding: 0.4rem 1.375rem;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .list-item-wrapper {
+      scroll-margin-inline-start: 2.75rem;
+      padding: 0.5rem 1.375rem;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .list-item-wrapper {
+      padding: 0.55rem 1.375rem;
+  }
+}
+
+/* Button Card */
+.card-btn {
+  position: relative;
+  padding: 0;
+  background: rgb(35, 35, 35);
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-btn:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* Poster Container */
+.poster {
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: rgb(35, 35, 35);
+}
+
+@media all {
+  .poster {
+      width: 7rem;
+      height: 9.8rem;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .poster {
+      width: 8.75rem;
+      height: 12.25rem;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .poster {
+      width: 11.25rem;
+      height: 15.75rem;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .poster {
+      width: 13.375rem;
+      height: 18.75rem;
+  }
+}
+
+/* Poster Background Image */
+.poster-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  background-size: cover;
+  z-index: 2;
+}
+
+.rank-number {
+  position: absolute;
+  z-index: 2;
+}
+
+@media all {
+  .rank-number {
+      font-size: 4rem;
+      bottom: 0.1rem;
+      left: -0.625rem;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .rank-number {
+      font-size: 5rem;
+      bottom: 0;
+      left: -1.375rem;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .rank-number { font-size: 6.25rem; }
+}
+
+@media all and (min-width: 1920px) {
+  .rank-number { font-size: 7.5rem; }
+}
+
+.rank-inner {
+  line-height: 1;
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  font-weight: 700;
+  color: rgb(65, 65, 65);
+  -webkit-text-stroke: 0.25rem rgb(255, 255, 255);
+  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.rank-inner::before {
+  content: attr(data-content);
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  -webkit-text-stroke: 0;
+  position: absolute;
+}
