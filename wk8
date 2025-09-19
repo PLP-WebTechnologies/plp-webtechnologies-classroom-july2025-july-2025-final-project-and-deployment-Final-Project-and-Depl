@@ -1,0 +1,105 @@
+# Importing required libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+# --------------------------------------------
+# Task 1: Load and Explore the Dataset
+# --------------------------------------------
+
+try:
+    # Load iris dataset from sklearn
+    iris = load_iris(as_frame=True)
+    df = iris.frame
+
+    # Map target integers to species names
+    df['species'] = df['target'].map(dict(enumerate(iris.target_names)))
+
+    print("✅ Dataset loaded successfully!\n")
+except Exception as e:
+    print("❌ Error loading dataset:", e)
+
+# Display first 5 rows
+print("First 5 rows of the dataset:")
+display(df.head()) # type: ignore
+
+# Dataset info
+print("\nDataset Info:")
+print(df.info())
+
+# Check missing values
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+# Clean dataset (not really needed here, iris has no missing values)
+df = df.dropna()
+
+# --------------------------------------------
+# Task 2: Basic Data Analysis
+# --------------------------------------------
+
+# Basic statistics
+print("\nBasic Statistics:")
+display(df.describe()) # type: ignore
+
+# Group by species and compute mean of numerical columns
+species_means = df.groupby("species").mean()
+print("\nAverage values per species:")
+display(species_means) # type: ignore
+
+# Interesting finding
+print("\nObservation:")
+print("- Petal length and petal width are strong differentiators among species.")
+
+# --------------------------------------------
+# Task 3: Data Visualization
+# --------------------------------------------
+
+# 1. Line chart - simulate trend (using sepal length as "time series")
+plt.figure(figsize=(8,5))
+plt.plot(df.index, df["sepal length (cm)"], label="Sepal Length", color="blue")
+plt.title("Line Chart: Sepal Length Trend")
+plt.xlabel("Index (simulated time)")
+plt.ylabel("Sepal Length (cm)")
+plt.legend()
+plt.show()
+
+# 2. Bar chart - average petal length per species
+plt.figure(figsize=(6,4))
+species_means["petal length (cm)"].plot(kind="bar", color="green")
+plt.title("Average Petal Length per Species")
+plt.xlabel("Species")
+plt.ylabel("Petal Length (cm)")
+plt.show()
+
+# 3. Histogram - distribution of sepal length
+plt.figure(figsize=(6,4))
+plt.hist(df["sepal length (cm)"], bins=20, color="orange", edgecolor="black")
+plt.title("Histogram of Sepal Length")
+plt.xlabel("Sepal Length (cm)")
+plt.ylabel("Frequency")
+plt.show()
+
+# 4. Scatter plot - Sepal length vs Petal length with species hue
+plt.figure(figsize=(6,4))
+sns.scatterplot(data=df, x="sepal length (cm)", y="petal length (cm)", hue="species", palette="viridis")
+plt.title("Scatter Plot: Sepal Length vs Petal Length")
+plt.xlabel("Sepal Length (cm)")
+plt.ylabel("Petal Length (cm)")
+plt.legend(title="Species")
+plt.show()
+
+# Optional: Pairplot for multivariate visualization
+sns.pairplot(df, hue='species')
+plt.show()
+
+# --------------------------------------------
+# Findings & Observations
+# --------------------------------------------
+print("\nFindings:")
+print("1. Setosa flowers have significantly smaller petal lengths compared to the other two species.")
+print("2. Versicolor and Virginica overlap in sepal length, but differ in petal dimensions.")
+print("3. The histogram shows most sepal lengths cluster around 5.5–6.5 cm.")
+print("4. Scatter plot confirms a positive correlation between sepal length and petal length.")
+print("5. Petal length and petal width are strong features for distinguishing species.")
