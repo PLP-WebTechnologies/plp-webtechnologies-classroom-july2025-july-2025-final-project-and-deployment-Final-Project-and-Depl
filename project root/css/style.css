@@ -1,0 +1,201 @@
+/* ==========================
+   GLOBAL STYLES
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000; /* Black */
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #BB0000; /* Red highlight */
+}
+
+.menu-toggle {
+  display: none; /* Hidden for now (add JS later) */
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('../images/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero span {
+  color: #BB0000;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #BB0000; /* Red button */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #006400; /* Green hover */
+}
+
+/* ==========================
+   BLOG + ABOUT SECTIONS
+========================== */
+section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  list-style: disc inside;
+  margin: 1rem 0;
+}
+
+.blog-preview {
+  background-color: #f9f9f9;
+  border-left: 5px solid #006400; /* Green accent */
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.blog-preview:hover {
+  transform: translateX(5px);
+}
+
+/* ==========================
+   CONTACT PAGE
+========================== */
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #BB0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #006400;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  text-align: center;
+  background-color: #000000;
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  color: #BB0000;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #006400;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide menu on small screens */
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+}
+
+.reveal { opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; }
+.reveal-visible { opacity: 1; transform: translateY(0); }

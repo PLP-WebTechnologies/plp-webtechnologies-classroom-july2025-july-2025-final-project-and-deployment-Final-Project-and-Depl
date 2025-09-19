@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Me - Get in touch with Samson Thuo for collaborations and inquiries.">
+  <title>Contact Me</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 🌐 Header / Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">MyPortfolio</a>
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 📞 Contact Section -->
+  <section class="contact">
+    <h1>Contact Me</h1>
+    <p>I'd love to hear from you! Whether it's a collaboration, feedback, or just to say hello — feel free to reach out.</p>
+
+    <!-- 📇 Direct Contact Info -->
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:thuosonkariuki@gmail.com">thuosonkariuki@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+254114071456">+254 114 071 456</a></p>
+    </div>
+
+    <!-- 📝 Contact Form -->
+    <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify action="">
+      <input type="hidden" name="form-name" value="contact">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- 🔗 Footer -->
+  <footer>
+    <p>&copy; 2025 Samson Thuo. Built with ❤️ and curiosity.</p>
+    <div class="social-links">
+      <a href="#" target="_blank">GitHub</a> |
+      <a href="#" target="_blank">LinkedIn</a> |
+      <a href="#" target="_blank">Twitter</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
