@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Linking my HTML and CSS files together-->
+        <link rel="stylesheet" href="style.css">
+        <!--They provide strucured,machine-readable information about the pag  which are for browsers,search engines and other web services-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <meta name="description" This is a personal advice from a student like you>
+        <meta name="keywords" Learning And Studing like a pro >
+        <!--Giving the title for my page-->
+        <title>Contact me</title>
+    </head>
+    <body class="me1">
+        <!--This part will contain my logo and my navigation bar-->
+        <header class="header">  
+             <h1 class="logo">Learning</h1>
+            <!--A nagation tag which conmy navigation links--> 
+             <nav>
+                <ul>
+                    <!--An unordered is the standard practice for creationg a list of links-->
+                    <!--Each list item will represent a page on my website-->
+                    <!--The a tag inside each list item is the actual link that will take the user to the next page-->
+                    <li class="current" >  <a href="index.html" >Home</a></li>
+                    <li class="About"> <a href="About.html">About</a></li>
+                    <li class="Contact"> <a href="Contact.html">Contact</a></li>
+                    
+                </ul>
+             </nav>
+    </header>
+    
+    <section class="me">
+    <h1 >Contact Me📲 </h1>
+    <p>You can contact me and even give me your comments using the form below. I hope you enjoyed and learnt something.Stay safe and goodbye 😘</p>
+   <div class="myform">
+    <form id="form">
+        <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="e.g Anabey"> 
+    <p style="color: blueviolet;" id="nameError" ></p>
+</div><br><br>
+<div >
+    <label for="email address">Email</label>
+    <input type="email" name="email address" id="email address" placeholder="e.g anab@gmail.com">
+<p id="emailError" style="color: blueviolet;"></p>
+</div><br><br>
+<div>
+    <label for="phone number">Phone  Number</label>
+    <input type="number" id="phone number" placeholder="e.g 07213456"> 
+<p id="PhonenumberError" style="color: blueviolet;"></p>
+</div><br><br>
+<div>
+<label for="Addiion">Comments</label>
+<input type="text" id="Addition" placeholder="Write your comments here"> 
+<p id="additionError" style="color: blueviolet;"></p>
+</div><br><br>
+<button class="submit">Submit</button>
+</form>
+</div>
+</section>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,127 @@
+
+
+/*Removing default spacing by using * and this will make sure that the styles will look consistent across all browsers*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Getting rid of the bullet points next to the navigation links*/
+nav ul{
+    list-style: none;
+}
+/*Styling the header by using the header element selector*/
+.header{
+    background-color:darkgray;
+    /*This will arrange the elements on the page*/
+    display: flex;
+    /*This will vertically center the logo and the navigation ba*/
+    align-items: center;
+    /*This will push the logo to the left and the navigation bar to the right*/
+    justify-content: space-between;
+    /*This will create some space around the content inside the header*/
+    padding: 20px;
+}
+nav ul li{
+    /*Making the links horizontal*/
+    display: inline-block;
+    /*Add some spacing to each link */ 
+    margin:0 15px ;
+    
+}
+nav ul li a{
+    /*Removing the underline from the navigation links*/
+    text-decoration: none;
+    /*Changing the text color*/
+    color:black;
+    /*Changing the font-size to make it a big larger*/
+    font-size:18px ;
+}
+nav ul li a:hover{
+    color: white;
+}
+/*Styling the hero section*/
+.hero{
+    /*Adding a background color tto our section*/
+    /*Stacking  the elements vertically and center them horizontally*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Adding a height */
+    height: 50vh;
+    /*Centers the content vertically within the hero section*/
+    justify-content: center;
+    /*Styling the text to make sure its readable*/
+    color: black;
+    background-color: peachpuff ;
+    
+}
+.button{
+    padding: 10px 20px;
+    background-color: rgb(23, 23, 23);
+    color: brown;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: beige;
+    
+}
+.About{
+    
+    padding: 80px;
+    text-align: center;
+    
+    
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: aqua;
+    padding: 50px;
+    text-align: center;
+}
+img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.info{
+text-align: center;
+}
+.para{
+    align-content: center;
+}
+.body2{
+    background-color: peachpuff;
+}
+.submit{
+    transition: background-color 4s ease-in-out,transform;
+}
+.submit:hover{
+    background-color: aqua ;
+    transform: scale(2);
+}
+.contact{
+text-align: center;
+}
+.me{
+    text-align: center;
+    background-color:  peachpuff;
+}
+.me1{
+    background-color: peachpuff;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.myform{
+    margin-top:2px ;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 7px;
+    width: 400px;
+    border: 3px saddlebrown;
+    background-color: darkgray;
+    box-shadow: 0cqw;
+    
+}
