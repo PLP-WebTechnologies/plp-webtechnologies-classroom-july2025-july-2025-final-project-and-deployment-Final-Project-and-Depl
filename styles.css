@@ -1,0 +1,200 @@
+.grid-layout {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main aside"
+    "footer footer footer";
+    grid-template-columns:2fr 1fr 0.5fr;
+    grid-template-rows:auto auto auto;
+    height: 100vh;
+}
+body {
+    background-image: url('images/image\ 1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: gold;
+    background-position: center;
+    transition: background-image 2s ease-in-out;
+    text-shadow: 1px 1px 1px;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: auto;
+    text-shadow: none;
+}
+.cta {
+    margin-top: 30px;
+    padding-right: 20px;
+    font-size: auto;
+    text-shadow: none;
+}
+
+.card {
+    font-size: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-shadow: none;
+}
+#About-contact {
+    display: flexbox;
+    text-align: right;
+    margin-top: -10px;
+    padding-right: 10px;
+}
+
+.top {
+    padding-left: 10px;
+    padding-right: 5px;
+    font-size: 20px
+}
+.icon {
+    justify-content: right;
+    align-items: right;
+}
+
+.aside_p {
+    display: grid;
+    justify-self: center;
+    padding-right: 20px;
+    font-size: larger;
+    
+}
+
+#heading {
+    font-size: 30px;
+    text-shadow: none;
+    margin-top: 50px;
+}
+
+.load {
+    font-size: 15px;
+}
+
+#contactForm {
+    display: flexbox;
+}
+
+.p {
+    display: flexbox;
+    font-size: 20px;
+}
+.contact_info {
+    display: flex;
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.asid_i {
+    justify-self: right;
+    align-self: center;
+    width: 30px;
+}
+
+.aside_b {
+    width: fit-content;
+    color: gold;
+    background-color: black;
+}
+
+header {
+    grid-area: header;
+    width: 100%;
+    height: auto;
+}
+
+
+
+main {
+    grid-area: main;
+    text-align: center; 
+}
+
+.content {
+    grid-area: main;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-top: 50px ;
+}
+
+.btn {
+    color: coral;
+    tab-size: auto;
+}
+
+.image-icon {
+    size-adjust: 20%;
+    position: relative;
+}
+.logo {
+    font-size: 10px;
+}
+
+aside {
+    grid-area: aside;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        font-size: 12px;
+        color: black;
+    }
+    nav {
+        font-size: 12px;
+        background-color: white;
+        color: black;
+    }
+    main {
+        font-size: 12px;
+        background-color: aqua;
+        color: black;
+    }
+    aside {
+        font-size: 12px;
+        background-color: wheat;
+        color: black;
+    }
+    footer {
+        font-size: 12px;
+        background-color: aqua;
+        color: black;
+    }
+}
+
+footer {
+    grid-area: footer;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.side_content {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: yellow;
+}
+
+
+
