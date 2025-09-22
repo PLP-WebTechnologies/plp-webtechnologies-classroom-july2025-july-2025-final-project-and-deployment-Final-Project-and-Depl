@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — YOFS</title>
+  <link rel="icon" href="images/yofs-logo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/yofs-logo.jpg" alt="YOFS Logo" class="logo">
+        <span class="brand-text">YOFS</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="contact-page">
+      <h1>Contact Us</h1>
+      <p>Reach out for a consultation or to discuss a project.</p>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="fullName">Full name</label>
+        <input id="fullName" name="fullName" type="text" required minlength="3" placeholder="Your full name">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" pattern="^(?:07\d{8}|01\d{8}|254\d{9}|\+2547\d{8})$" placeholder="0712345678 or +2547..." required>
+
+        <label for="service">Interested service</label>
+        <select id="service" name="service" required>
+          <option value="">Choose a service</option>
+          <option>Data Analysis</option>
+          <option>AI/ML Agent</option>
+          <option>Web & Hosting</option>
+          <option>Network Management</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2025 YOFS</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
