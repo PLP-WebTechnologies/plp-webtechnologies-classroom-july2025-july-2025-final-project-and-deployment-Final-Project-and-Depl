@@ -1,0 +1,138 @@
+:root {
+  --max-width: 1100px;
+  --gap: 1rem;
+  --accent: #0d6efd;
+  --bg: #ffffff;
+  --text: #1b1b1b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.site-header {
+  background: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.site-nav a.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+}
+
+/* Hero section */
+.hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Cards grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap);
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Footer */
+.site-footer {
+  padding: 1.25rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive nav */
+@media (max-width: 800px) {
+  .site-nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 260px;
+    background: var(--bg);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    padding-top: 4rem;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.08);
+  }
+  .site-nav.open {
+    transform: translateX(0);
+  }
+  .site-nav ul {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
