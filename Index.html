@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>High Integrity Carbon Credits — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="High Integrity Carbon Credits — transparent carbon projects, verification, and impact reporting.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">HICC</a>
+      <nav id="main-nav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="impact.html">Impact</a>
+        <a href="contact.html" class="btn-link">Contact</a>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>High-integrity carbon credits you can trust</h1>
+        <p>We verify, track, and market carbon removal and avoidance projects with full transparency and impact reporting.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn ghost" href="about.html">How it works</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article class="feature">
+        <h3>Third-party verification</h3>
+        <p>All projects audited to global standards and public registries.</p>
+      </article>
+      <article class="feature">
+        <h3>Traceable tracking</h3>
+        <p>Each credit produced has full provenance and a public ledger entry.</p>
+      </article>
+      <article class="feature">
+        <h3>Community first</h3>
+        <p>Projects deliver local economic benefits and ecological gain.</p>
+      </article>
+    </section>
+
+    <section class="featured-projects container">
+      <h2>Featured Projects</h2>
+      <div class="project-grid" id="project-grid">
+        <!-- JS will populate sample cards -->
+      </div>
+      <div class="center">
+        <a class="btn" href="projects.html">See all projects</a>
+      </div>
+    </section>
+
+    <section class="newsletter container">
+      <div class="newsletter-inner">
+        <h3>Stay informed</h3>
+        <p>Get quarterly impact reports and new project listings.</p>
+        <form id="newsletter-form" class="small-form" novalidate>
+          <input type="email" id="nl-email" name="email" required placeholder="Your email">
+          <button class="btn small" type="submit">Subscribe</button>
+        </form>
+        <p id="nl-msg" class="form-msg" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="logo" href="index.html">HICC</a>
+        <p>Transparent carbon credits — verified & auditable.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="impact.html">Impact</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom container">
+      <small>© <span id="year"></span> HICC. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+
+hicc-site/
+├─ index.html
+├─ about.html
+├─ projects.html
+├─ impact.html
+├─ contact.html
+├─ README.md
+├─ css/
+│  └─ styles.css
+├─ js/
+│  └─ script.js
+└─ images/
+   └─ (place project images here)

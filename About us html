@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — High Integrity Carbon Credits</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header (same pattern as index) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">HICC</a>
+      <nav id="main-nav-2" class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="impact.html">Impact</a>
+        <a href="contact.html" class="btn-link">Contact</a>
+      </nav>
+      <button id="nav-toggle-2" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>About High Integrity Carbon Credits</h1>
+      <p>Our mission is to scale verified carbon removal and avoidance while protecting communities and ecosystems.</p>
+    </section>
+
+    <section class="how container">
+      <h2>Our Methodology</h2>
+      <ol>
+        <li>Project vetting and baseline assessment.</li>
+        <li>Third-party monitoring and continuous verification.</li>
+        <li>Issuance of credits with public provenance.</li>
+        <li>Annual impact reporting and local benefit tracking.</li>
+      </ol>
+    </section>
+
+    <section class="team">
+      <h2>Team & Partners</h2>
+      <div class="team-grid">
+        <article class="team-card"><h3>Dr. A. Verifier</h3><p>Lead Scientist</p></article>
+        <article class="team-card"><h3>M. Field</h3><p>Project Director</p></article>
+        <article class="team-card"><h3>L. Partner</h3><p>Community Lead</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="logo" href="index.html">HICC</a>
+        <p>Transparent carbon credits — verified & auditable.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="impact.html">Impact</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom container">
+      <small>© <span id="year-2"></span> HICC. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

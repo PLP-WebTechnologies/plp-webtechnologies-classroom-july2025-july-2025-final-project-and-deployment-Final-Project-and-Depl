@@ -1,0 +1,29 @@
+# High Integrity Carbon Credits (HICC) — Static Site
+
+This repository contains a responsive multi-page website built with HTML5, CSS, and JavaScript. It's a demonstration project for a transparent carbon credits platform.
+
+## Pages
+- `index.html` — Home
+- `about.html` — About / methodology
+- `projects.html` — Projects & Services
+- `impact.html` — Impact & Gallery
+- `contact.html` — Contact form
+
+## Structure
+
+css/ js/ images/ index.html about.html projects.html impact.html contact.html README.md
+
+## Features
+- Mobile-first responsive layout
+- Semantic HTML5
+- Mobile navigation toggle
+- Client-side form validation (contact & newsletter)
+- Project filtering, counters, and sample gallery
+- Ready to deploy to GitHub Pages / Netlify / Vercel
+
+## How to run locally
+Open `index.html` in any modern browser. For a local server (recommended for relative path and testing):
+```bash
+# Python 3
+python -m http.server 8000
+# then visit http://localhost:8000

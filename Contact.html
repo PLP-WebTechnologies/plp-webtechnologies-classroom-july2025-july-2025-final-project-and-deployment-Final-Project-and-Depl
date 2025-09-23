@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — HICC</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">HICC</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="impact.html">Impact</a>
+        <a href="contact.html" class="btn-link">Contact</a>
+      </nav>
+      <button id="nav-toggle-5" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Contact Us</h1>
+      <p>Tell us about your project interest or request a partnership conversation.</p>
+    </section>
+
+    <section class="contact-grid">
+      <form id="contact-form" class="contact-form" novalidate>
+        <label>
+          Full name
+          <input type="text" id="name" name="name" required placeholder="Your full name">
+        </label>
+        <label>
+          Email
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </label>
+        <label>
+          Interested in
+          <select id="interest" name="interest">
+            <option>Project partnership</option>
+            <option>Buy credits</option>
+            <option>Verification services</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          Message
+          <textarea id="message" name="message" rows="5" required placeholder="Tell us more..."></textarea>
+        </label>
+        <button class="btn" type="submit">Send message</button>
+        <p id="contact-msg" class="form-msg" aria-live="polite"></p>
+      </form>
+
+      <aside class="contact-info">
+        <h3>Office</h3>
+        <p>123 Greenway Ave<br/>Nairobi, Kenya</p>
+        <p>Email: <a href="mailto:info@hicc.example">info@hicc.example</a></p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="logo" href="index.html">HICC</a>
+        <p>Transparent carbon credits — verified & auditable.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="impact.html">Impact</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom container">
+      <small>© <span id="year-5"></span> HICC. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
