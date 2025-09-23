@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  background: #0066cc;
+  padding: 1em;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+}
+
+header nav a.active {
+  border-bottom: 2px solid yellow;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5em 1em;
+  background:<img src="pictures/ background.jpeg" alt="pictures" id="slide">
+  color: white;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1, .hero p {
+  background: rgba(0,0,0,0.5);
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+/* Slider */
+.slider {
+  text-align: center;
+  margin: 2em 0;
+}
+
+
+   .slider img {
+    width: 100%;        /* Stretch across page */
+    max-height: 600px;  /* Make it bigger but limited */
+    object-fit: cover;  /* Prevent distortion */
+    border-radius: 10px; /* Optional: smooth corners */
+  
+}
+.controls button {
+  margin: 0.5em;
+  padding: 0.6em 1em;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+/* Destinations Grid */
+.destinations {
+  padding: 2em;
+  text-align: center;
+}
+.destinations .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  padding: 1em;
+}
+.card {
+  background: #f9f9f9;
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* About & Contact Sections */
+.about, .contact {
+  padding: 2em;
+  max-width: 900px;
+  margin: auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input, form textarea {
+  margin: 0.5em 0;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  padding: 0.8em;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #333;
+  color: white;
+  margin-top: 2em;
+}
