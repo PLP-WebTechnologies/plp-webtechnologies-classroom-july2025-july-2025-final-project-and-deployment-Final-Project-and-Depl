@@ -1,90 +1,89 @@
-# 📦 Final Assignment: Build, Organize, and Deploy a Multipage Website
+# Joseph Chege - Personal Portfolio 💻✨
 
-You're now ready to bring everything together—HTML, CSS, JavaScript, planning, structure, and deployment. This final project challenges you to **conceptualize, build, and deploy a multi-page website** that is responsive, interactive, and ready for the real world.
+Welcome to my personal portfolio website, a creatively styled and fully animated showcase of my skills, projects, and personality, built using only HTML and CSS*!
 
-This assignment will guide you from planning your site all the way to deploying it online. Let’s make your project *production-worthy*! 🚀
+## 📂 Project Structure
 
----
+📁assets/
+📁images/
+📁 styles/
+├── styles.css
+├── animations.css
+├── responsive.css
+📁 pages/
+├── index.html
+├── education.html
+├── projects.html
+├── contact.html
+├── secret.html
 
-## 🌐🎯 Part 1: Planning and Organizing a Multipage Website
+## 🚀 Features
 
-Before you write any code, take time to plan:
+### ✅ Core Sections
 
-* Define your website's purpose (portfolio, product showcase, blog, etc.)
-* Outline 3–5 pages (e.g., Home, About, Services, Contact, Gallery)
-* Sketch or describe the layout of each page
-* Map out internal navigation (how pages link to one another)
+- *About* – Introduction and motivation. As well as a downloadable CV.
+- *Programming Languages* – Listed in glowing animated cards.
+- *Education* – Background and all that excites me.
+- *Projects* – My favorite builds.
+- *Contact Form* – Simple, stylish way to connect using formspree.
 
-**Goal:** Show intentional structure and user journey across the site.
+### 🌈 Enhancements
 
----
+- 🎇 *Glowing Cards*: Stylish language cards with hover animations.
+- 🌠 *Animated Navigation*: Smooth transitions and hover effects.
+- 🔐 *Secret Page*: Hidden link to a secret creative page!
+- 📱 *Responsive Design*: Clean across mobile and desktop.
+- 🎯 *Sticky Footer Icons*: Updated GitHub, LinkedIn, Email.
 
-## 🌍💻 Part 2: Build the Website Using HTML5, CSS, and JavaScript
+## 💡 How to Use
 
-Using your plan, begin building:
+1. *Clone the Repository*
 
-* Use HTML5 for semantic structure
-* Apply CSS for responsive layout, styling, and animations
-* Use JavaScript to add interactivity (menus, forms, toggles, dynamic content)
+git clone <https://github.com/KyUCOMRADE/My-Portfolio->
+cd portfolio
+Open index.html in your browser
+That’s it! No frameworks, servers, or bundlers needed.
 
-Each page should:
+## 🔗 Live Portfolio
 
-* Be mobile-responsive
-* Share a consistent layout/header/footer
-* Include at least one interactive element (e.g., form validation, toggle menu, animation on scroll)
+👉 [View My Portfolio](https://KyUCOMRADE.github.io/My-Portfolio-/)
 
-**Goal:** Integrate everything you’ve learned in a cohesive, functioning project.
+## 👩‍💻 Tech Used
 
----
+1.HTML5
+2.CSS3
 
-## 🛠️🚀 Part 3: Best Practices for Code Organization
+Pure creativity and fun
 
-Before deployment, refactor your project to follow production-friendly practices:
+📫 Contact
+Email: <chegejoseph5006@gmail.com>
+GitHub: <https://github.com/KyUCOMRADE>
 
-* Organize files in folders (`/css`, `/js`, `/images`, etc.)
-* Write clean, modular, and commented code
-* Use meaningful file names and relative paths
-* Validate your HTML/CSS and test on different screen sizes
+X: <https://x.com/josephcheg27035?t=DqycPGoK50B1zQr0e9K6uw&s=09>
 
-**Goal:** Prepare your codebase to be readable, maintainable, and scalable.
+⭐ Credits
+Inspired by tech, design, and a little bit of magic ✨
 
----
+## 📝 License
 
-## 🌐🚀 Part 4: Introduction to Hosting and Deployment
+This project is licensed under the MIT License.
 
-Once your project is complete, choose a method to **host your site online**.
+Copyright (c) 2023 Joseph Chege
 
-You can use:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* **GitHub Pages** (great for portfolios and static sites)
-* **Netlify** (powerful CI/CD features and easy form support)
-* **Vercel** (lightning-fast deployment for frontend projects)
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Deploy your project and confirm that:
-
-* All links and scripts work
-* It loads properly on mobile and desktop
-* It has a clear, shareable URL
-
-**Goal:** Publish your work online and make it accessible to the world.
-
----
-
-## Deliverables
-
-1. A GitHub repository containing:
-
-   * Your complete project code, properly organized
-   * A `README.md` file explaining your project purpose, structure, and live URL
-2. A live deployed website (hosted via GitHub Pages, Netlify, or Vercel)
-
----
-
-## Outcome
-
-* Clarity and thoroughness of planning documentation
-* Proper use of HTML5, CSS, and JavaScript across multiple pages
-* Responsive and accessible design
-* Clean, well-organized, and commented code
-* Successful live deployment with a working link
-* Evidence of following best practices
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE

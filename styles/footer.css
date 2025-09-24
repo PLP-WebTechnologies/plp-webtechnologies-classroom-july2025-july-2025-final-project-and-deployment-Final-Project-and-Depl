@@ -1,0 +1,75 @@
+.sticky-footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #433e3e;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  box-shadow: 0 -2px rgba(61, 117, 117, 0.2);
+}
+
+.footer-icons {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 1rem;
+  z-index: 100;
+ box-shadow: 0 0 10px #4dd8bc;
+ border-radius: 50%;
+ font-size: 1.2rem;
+ color: #00e1ff;
+ padding: 10px 12px;
+ text-decoration: none;
+ 
+}
+.footer-icons:hover {
+  background: #00eaff;
+  color: #111;
+  transition: scale(1.2);
+}
+.footer-icons a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+.footer-icons a:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px #00ddff);
+}
+.footer-text {
+  color: #fff;
+  font-size: 0.9rem;
+}
+.footer-text a {
+  color: #00e1ff;
+  text-decoration: none;
+}
+.footer-text a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .footer-text {
+    font-size: 0.8rem;
+  }
+  .footer-icons {
+    font-size: 1rem;
+    gap: 0.5rem;
+    padding: 8px 10px;
+  }
+  .footer-icons a img {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 400px) {
+  .footer-text {
+    font-size: 0.7rem;
+  }
+  .footer-icons a img {
+    width: 20px;
+    height: 20px;
+  }
+}
+/* End of styles/footer.css */
