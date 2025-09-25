@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home — My Portfolio</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/index.html">MyBrand</a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <ul>
+          <li><a href="/index.html" class="active">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/gallery.html">Works</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Designing beautiful web experiences</h1>
+        <p>I'm a frontend developer & designer building accessible, responsive websites.</p>
+        <p><a class="btn" href="/contact.html">Get in touch</a></p>
+      </div>
+    </section>
+
+    <section class="featured container">
+      <h2>Featured Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="/assets/images/projects/project1.jpg" alt="Project screenshot">
+          <h3>Project One</h3>
+          <p>Short description. <a href="/gallery.html">See more</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> MyBrand — Built with care.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
