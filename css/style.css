@@ -1,0 +1,289 @@
+
+/* 1. GLOBAL STYLES & RESET */
+
+:root {
+    --primary-color: #A32D2D; /* Deep Red/Maroon */
+    --secondary-color: #333; /* Dark Grey */
+    --accent-color: #FFC300; /* Gold/Yellow Accent */
+    --light-bg: #F8F8F8;
+    --font-stack: 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    background-color: #fff;
+    color: var(--secondary-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+/* 2. HEADER & NAVIGATION */
+
+.main-header {
+    background-color: #fff;
+    border-bottom: 2px solid var(--light-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed for your logo */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 15px;
+    transition: color 0.3s;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* 3. HERO SECTION (INDEX.HTML) */
+
+.hero-section {
+    background: url('../images/hero.jpg') no-repeat center center/cover; /* Relative path to image */
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    /* Dark overlay for text readability */
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: multiply;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+}
+
+
+/* 4. HIGHLIGHTS & CARDS */
+
+.highlights-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.highlights-section h2 {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.highlight-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+
+/* 5. MENU PAGE STYLES */
+
+.page-header {
+    text-align: center;
+    padding: 30px 0 10px;
+    border-bottom: 1px solid var(--light-bg);
+}
+
+.menu-list h2 {
+    color: var(--primary-color);
+    margin-top: 40px;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.menu-item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.menu-item {
+    padding: 15px;
+    border: 1px solid var(--light-bg);
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.menu-item h3 {
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.menu-item .price {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* 6. CONTACT PAGE STYLES */
+
+.contact-content {
+    display: flex;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+}
+
+.contact-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    flex: 2;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+
+
+/* 7. FOOTER */
+
+.main-footer {
+    background-color: var(--secondary-color);
+    color: var(--light-bg);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+
+/* 8. MEDIA QUERIES (RESPONSIVENESS) */
+
+@media (max-width: 768px) {
+    /* Adjust navigation for mobile/tablet */
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .main-nav li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Adjust highlights and contact for smaller screens */
+    .highlight-cards,
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+}
