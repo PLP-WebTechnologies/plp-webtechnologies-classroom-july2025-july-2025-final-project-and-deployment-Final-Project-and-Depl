@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Charly Shop - Votre destination en ligne pour les accessoires de mode. Trouvez les meilleurs produits pour hommes et femmes.">
+    <!-- Meta Tags pour SEO -->
+    <meta name="keywords" content="accessoires de mode, Charly Shop, produits pour hommes, produits pour femmes">
+    <meta name="Yusuke Uraméshi" content="Charly Shop">
+    <meta name="robots" content="index, follow">
+    <title>Charly Shop - Accessoires de Mode</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Bodoni -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header avec navigation -->
+    <header>
+        <div class="logo">
+            <h1>Charly Shop</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="produits.html">Nos Produits</a>
+                    <div class="dropdown-content">
+                        <a href="hommes.html">Hommes</a>
+                        <a href="femmes.html">Femmes</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Nous Contacter</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="#" id="cart-btn"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+        </div>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Bannière principale avec slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="images/slider/slide1.jpg" alt="Produit phare 1">
+                <div class="slide-content">
+                    <h2>Collection Exclusive</h2>
+                    <p>Découvrez nos accessoires tendance</p>
+                    <a href="produits.html" class="btn">Voir Plus</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/slider/slide2.jpg" alt="Produit phare 2">
+                <div class="slide-content">
+                    <h2>Nouveautés Hommes</h2>
+                    <p>Élégance et style pour chaque occasion</p>
+                    <a href="hommes.html" class="btn">Voir Plus</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/slider/slide3.jpg" alt="Produit phare 3">
+                <div class="slide-content">
+                    <h2>Collection Femmes</h2>
+                    <p>Raffinement et tendance au quotidien</p>
+                    <a href="femmes.html" class="btn">Voir Plus</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Section Catégories de Produits -->
+    <section class="product-categories">
+        <h2 class="section-title">Nos Produits</h2>
+        <div class="categories-container">
+            <!-- Catégorie Hommes -->
+            <div class="category-card">
+                <div class="category-gallery">
+                    <img src="images/categories/homme1.jpg" alt="Mode Homme" class="active">
+                    <img src="images/categories/homme2.jpg" alt="Mode Homme">
+                    <img src="images/categories/homme3.jpg" alt="Mode Homme">
+                </div>
+                <div class="category-info">
+                    <h3>Hommes</h3>
+                    <div class="category-actions">
+                        <a href="https://wa.me/1234567890?text=Je%20suis%20intéressé%20par%20vos%20produits%20pour%20hommes" class="action-btn buy-btn"><i class="fab fa-whatsapp"></i> Acheter</a>
+                        <a href="produits/hommes.html" class="action-btn more-btn">Voir Plus</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Catégorie Femmes -->
+            <div class="category-card">
+                <div class="category-gallery">
+                    <img src="images/categories/femme1.jpg" alt="Mode Femme" class="active">
+                    <img src="images/categories/femme2.jpg" alt="Mode Femme">
+                    <img src="images/categories/femme3.jpg" alt="Mode Femme">
+                </div>
+                <div class="category-info">
+                    <h3>Femmes</h3>
+                    <div class="category-actions">
+                        <a href="https://wa.me/1234567890?text=Je%20suis%20intéressé%20par%20vos%20produits%20pour%20femmes" class="action-btn buy-btn"><i class="fab fa-whatsapp"></i> Acheter</a>
+                        <a href="produits/femmes.html" class="action-btn more-btn">Voir Plus</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Catégorie Chaussures -->
+            <div class="category-card">
+                <div class="category-gallery">
+                    <img src="images/categories/chaussure1.jpg" alt="Chaussures" class="active">
+                    <img src="images/categories/chaussure2.jpg" alt="Chaussures">
+                    <img src="images/categories/chaussure3.jpg" alt="Chaussures">
+                </div>
+                <div class="category-info">
+                    <h3>Chaussures</h3>
+                    <div class="category-actions">
+                        <a href="https://wa.me/1234567890?text=Je%20suis%20intéressé%20par%20vos%20chaussures" class="action-btn buy-btn"><i class="fab fa-whatsapp"></i> Acheter</a>
+                        <a href="produits/chaussures.html" class="action-btn more-btn">Voir Plus</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Catégorie Accessoires -->
+            <div class="category-card">
+                <div class="category-gallery">
+                    <img src="images/categories/accessoire1.jpg" alt="Accessoires" class="active">
+                    <img src="images/categories/accessoire2.jpg" alt="Accessoires">
+                    <img src="images/categories/accessoire3.jpg" alt="Accessoires">
+                </div>
+                <div class="category-info">
+                    <h3>Accessoires</h3>
+                    <div class="category-actions">
+                        <a href="https://wa.me/1234567890?text=Je%20suis%20intéressé%20par%20vos%20accessoires" class="action-btn buy-btn"><i class="fab fa-whatsapp"></i> Acheter</a>
+                        <a href="produits/accessoires.html" class="action-btn more-btn">Voir Plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avantages -->
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-truck"></i>
+            <h3>Livraison Rapide</h3>
+            <p>Livraison dans toute la ville</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-medal"></i>
+            <h3>Qualité Premium</h3>
+            <p>Des produits soigneusement sélectionnés</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-headset"></i>
+            <h3>Support Client</h3>
+            <p>Assistance 7j/7 via WhatsApp</p>
+        </div>
+    </section>
+
+    <!-- Panier d'achat (caché par défaut) -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Votre Panier</h2>
+                <button id="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <p>Total: <span id="cart-total-price">0.00</span> €</p>
+                </div>
+                <a href="https://wa.me/1234567890?text=Je%20souhaite%20finaliser%20ma%20commande" class="checkout-btn" id="checkout-btn">
+                    <i class="fab fa-whatsapp"></i> Terminer la commande
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Charly Shop</h2>
+                <p>Votre boutique d'accessoires de mode</p>
+            </div>
+            <div class="footer-links">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="produits.html">Nos Produits</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Adresse, Ville, Pays</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> contact@charlyshop.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Charly Shop. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/slider.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

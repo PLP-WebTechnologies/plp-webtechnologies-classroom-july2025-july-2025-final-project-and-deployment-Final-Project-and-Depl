@@ -1,0 +1,156 @@
+/* Responsive Styles */
+
+/* Tablettes */
+@media screen and (max-width: 992px) {
+    /* Header */
+    .nav-links {
+        gap: 15px;
+    }
+    
+    /* Hero Slider */
+    .hero-slider {
+        height: 60vh;
+    }
+    
+    .slide-content h2 {
+        font-size: 2rem;
+    }
+    
+    .slide-content p {
+        font-size: 1rem;
+    }
+    
+    /* Categories */
+    .categories-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Features */
+    .feature {
+        padding: 15px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 15px 5%;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        display: none;
+        padding-left: 20px;
+    }
+    
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    /* Hero Slider */
+    .hero-slider {
+        height: 50vh;
+    }
+    
+    .slide-content {
+        max-width: 90%;
+        padding: 15px;
+    }
+    
+    .slide-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .slider-controls button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    /* Categories */
+    .categories-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Cart Overlay */
+    .cart-overlay {
+        width: 100%;
+        right: -100%;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-contact p {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-slider {
+        height: 40vh;
+    }
+    
+    .slide-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .slide-content p {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .feature i {
+        font-size: 2rem;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        right: 20px;
+        bottom: 20px;
+    }
+}

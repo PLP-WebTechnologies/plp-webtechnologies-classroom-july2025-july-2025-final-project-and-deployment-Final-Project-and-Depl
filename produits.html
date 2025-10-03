@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - Charly Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&display=swap" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: var(--gradient-gold);
+            padding: 80px 0;
+            text-align: center;
+            color: var(--text-primary);
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .category-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .category-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+        
+        .category-overlay h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .category-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: var(--gradient-gold);
+            color: var(--text-primary);
+            border-radius: 25px;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+        
+        .category-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-card {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header avec navigation -->
+    <header>
+        <div class="logo">
+            <h1>Charly Shop</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="produits.html" class="active">Nos Produits</a>
+                    <div class="dropdown-content">
+                        <a href="hommes.html">Hommes</a>
+                        <a href="femmes.html">Femmes</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Nous Contacter</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="#" id="cart-btn"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+        </div>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Nos Collections</h1>
+            <p style="color: #000000;">Découvrez nos accessoires et vêtements élégants pour hommes et femmes</p>
+        </div>
+    </section>
+
+    <!-- Catégories principales -->
+    <section class="categories-section">
+        <div class="categories-grid">
+            <!-- Catégorie Hommes -->
+            <div class="category-card">
+                <img src="images/categories/hommes.jpg" alt="Collection Hommes" class="category-image" onerror="this.src='https://via.placeholder.com/600x400?text=Collection+Hommes'">
+                <div class="category-overlay">
+                    <h3>Hommes</h3>
+                    <p>Accessoires et vêtements pour hommes</p>
+                    <a href="hommes.html" class="category-btn">Découvrir</a>
+                </div>
+            </div>
+            
+            <!-- Catégorie Femmes -->
+            <div class="category-card">
+                <img src="images/categories/femmes.jpg" alt="Collection Femmes" class="category-image" onerror="this.src='https://via.placeholder.com/600x400?text=Collection+Femmes'">
+                <div class="category-overlay">
+                    <h3>Femmes</h3>
+                    <p>Accessoires et vêtements pour femmes</p>
+                    <a href="femmes.html" class="category-btn">Découvrir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panier d'achat (overlay) -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Votre Panier</h2>
+                <button class="close-cart" id="close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">0,00 €</span>
+                </div>
+                <button class="checkout-btn" id="checkout-btn">
+                    <i class="fab fa-whatsapp"></i> Finaliser la commande
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Charly Shop</h3>
+                    <p>Votre boutique d'accessoires de mode pour hommes et femmes.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Mode, Paris</p>
+                    <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                    <p><i class="fas fa-envelope"></i> info@charlyshop.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Charly Shop. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
