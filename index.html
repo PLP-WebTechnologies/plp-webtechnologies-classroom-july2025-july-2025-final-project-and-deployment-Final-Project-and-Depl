@@ -46,7 +46,7 @@
     <section class="hero-slider">
         <div class="slider-container">
             <div class="slide active">
-                <img src="images/slider/denim_dress.jpg" alt="Produit phare 1">
+                <img src="images/products/femmes/denim_dress.jpg" alt="Produit phare 1">
                 <div class="slide-content">
                     <h2>Collection Exclusive</h2>
                     <p>Découvrez nos accessoires tendance</p>
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="slide">
-                <img src="images/slider/slide2.jpg" alt="Produit phare 2">
+                <img src="images/products/hommes/varsity_jacket.jpg" alt="Produit phare 2">
                 <div class="slide-content">
                     <h2>Nouveautés Hommes</h2>
                     <p>Élégance et style pour chaque occasion</p>
@@ -125,9 +125,9 @@
             <!-- Catégorie Chaussures -->
             <div class="category-card">
                 <div class="category-gallery">
-                    <img src="images/categories/chaussure1.jpg" alt="Chaussures" class="active">
-                    <img src="images/categories/chaussure2.jpg" alt="Chaussures">
-                    <img src="images/categories/chaussure3.jpg" alt="Chaussures">
+                    <img src="images/products/femmes/leather_sandals.jpg" alt="Chaussures" class="active">
+                    <img src="images/products/hommes/casual_sneakers.jpg" alt="Chaussures">
+                    <img src="images/products/femmes/wedge_sandals.jpg" alt="Chaussures">
                 </div>
                 <div class="category-info">
                     <h3>Chaussures</h3>
@@ -141,9 +141,9 @@
             <!-- Catégorie Accessoires -->
             <div class="category-card">
                 <div class="category-gallery">
-                    <img src="images/categories/accessoire1.jpg" alt="Accessoires" class="active">
-                    <img src="images/categories/accessoire2.jpg" alt="Accessoires">
-                    <img src="images/categories/accessoire3.jpg" alt="Accessoires">
+                    <img src="images/products/hommes/luxury_watch.jpg" alt="Accessoires" class="active">
+                    <img src="images/products/femmes/handbag_set.jpg" alt="Accessoires">
+                    <img src="images/products/hommes/crossbody_bag.jpg" alt="Accessoires">
                 </div>
                 <div class="category-info">
                     <h3>Accessoires</h3>
@@ -153,6 +153,27 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <h2 class="section-title">Notre Galerie</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="images/products/femmes/gold_jewelry_set.jpg" alt="Bijoux pour femmes"></div>
+            <div class="gallery-item"><img src="images/products/hommes/armani_watch_set.jpg" alt="Montre pour hommes"></div>
+            <div class="gallery-item"><img src="images/products/femmes/saint_laurent_bag.jpg" alt="Sac Saint Laurent"></div>
+            <div class="gallery-item"><img src="images/products/hommes/steampunk_sunglasses.jpg" alt="Lunettes de soleil Steampunk"></div>
+            <div class="gallery-item"><img src="images/products/femmes/cocktail_dress.jpg" alt="Robe de cocktail"></div>
+            <div class="gallery-item"><img src="images/products/hommes/brogue_shoes.jpg" alt="Chaussures Brogue"></div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products-section">
+        <h2 class="section-title">Nos Produits Phares</h2>
+        <div class="products-container featured-products-container">
+            <!-- Featured products will be injected here by JavaScript -->
         </div>
     </section>
 
@@ -235,10 +256,21 @@
         </div>
     </footer>
 
-    <script src="js/slider.js"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/navbar.js"></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/products.js" defer></script>
+    <script src="js/renderProducts.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuredProducts = [
+                ...hommesProducts.slice(0, 2), // First 2 men's products
+                ...femmesProducts.slice(0, 2)  // First 2 women's products
+            ];
+            renderProducts('.featured-products-container', featuredProducts);
+        });
+    </script>
 </body>
 </html>

@@ -586,14 +586,14 @@ const hommesProducts = [
     id: 'h41',
     name: 'Men\'s Aviator Metal Sunglas',
     price: 59.99,
-    image: 'images/products/hommes/Men's Aviator Metal Sunglas.jpeg',
+    image: 'images/products/hommes/Men\'s Aviator Metal Sunglas.jpeg',
     category: 'vetements'
   },
   {
     id: 'h42',
     name: 'Men\'s Slip-On Casual Loafers',
     price: 59.99,
-    image: 'images/products/hommes/Men's Slip-On Casual Loafers.jpeg',
+    image: 'images/products/hommes/Men\'s Slip-On Casual Loafers.jpeg',
     category: 'vetements'
   },
 ];

@@ -146,6 +146,58 @@
         .category-content.active {
             display: block;
         }
+
+        .products-slider {
+            position: relative;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .slider-controls button {
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            pointer-events: all;
+            transition: background 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .slider-controls button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .products-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 20px;
+            gap: 20px;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+        }
+
+        .products-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        .product-card {
+            flex: 0 0 280px; /* Prevent cards from shrinking */
+        }
     </style>
 </head>
 <body>
@@ -195,12 +247,14 @@
 
             <!-- Tous les produits -->
             <div class="category-content active" id="all">
-                <div class="slider-controls">
-                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
-                </div>
-                <div class="products-container">
-                    <!-- Les produits seront injectés ici par JavaScript -->
+                <div class="products-slider">
+                    <div class="slider-controls">
+                        <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="products-container">
+                        <!-- Les produits seront injectés ici par JavaScript -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -284,22 +338,29 @@
             const productsContainer = document.querySelector('.products-container');
             const categoryTabs = document.querySelectorAll('.category-tab');
 
-            // Initial render of all products
-            renderProducts('.products-container', hommesProducts);
+            function renderAndInit() {
+                const activeTab = document.querySelector('.category-tab.active');
+                const category = activeTab.getAttribute('data-category');
+                const filteredProducts = category === 'all'
+                    ? hommesProducts
+                    : hommesProducts.filter(p => p.category === category);
+
+                // Pass the slider initializers as a callback
+                renderProducts('.products-container', filteredProducts, () => {
+                    initProductCards();
+                    initHorizontalSlider();
+                });
+            }
+
+            // Initial render
+            renderAndInit();
 
             // Category filtering
             categoryTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
                     categoryTabs.forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
-                    
-                    const category = this.getAttribute('data-category');
-                    
-                    const filteredProducts = category === 'all'
-                        ? hommesProducts
-                        : hommesProducts.filter(p => p.category === category);
-
-                    renderProducts('.products-container', filteredProducts);
+                    renderAndInit();
                 });
             });
 

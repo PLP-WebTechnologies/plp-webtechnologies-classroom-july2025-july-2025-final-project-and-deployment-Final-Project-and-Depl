@@ -1,12 +1,3 @@
-// Product Slider with Auto-Scrolling Images
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize product cards with auto-scrolling images
-    initProductCards();
-    
-    // Initialize horizontal slider for product categories
-    initHorizontalSlider();
-});
-
 // Initialize product cards with auto-scrolling images
 function initProductCards() {
     const productCards = document.querySelectorAll('.product-card');
@@ -63,23 +54,38 @@ function initHorizontalSlider() {
         
         if (!container || !prevBtn || !nextBtn) return;
         
-        // Set scroll amount (width of one product card + margin)
         const scrollAmount = 320; // Adjust based on your card width + margin
+        let autoScrollInterval;
+
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                // If we've scrolled to the end, scroll back to the beginning
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+                    container.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }, 3000); // Scroll every 3 seconds
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+
+        // Start auto-scrolling by default
+        startAutoScroll();
+
+        // Pause on hover
+        slider.addEventListener('mouseenter', stopAutoScroll);
+        slider.addEventListener('mouseleave', startAutoScroll);
         
-        // Scroll to previous set of products
+        // Manual controls
         prevBtn.addEventListener('click', () => {
-            container.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         });
         
-        // Scroll to next set of products
         nextBtn.addEventListener('click', () => {
-            container.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         });
     });
 }

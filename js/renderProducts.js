@@ -3,7 +3,13 @@
  * @param {string} containerSelector - The CSS selector for the container element.
  * @param {Array<Object>} products - An array of product objects to render.
  */
-function renderProducts(containerSelector, products) {
+/**
+ * Dynamically renders product cards into a specified container.
+ * @param {string} containerSelector - The CSS selector for the container element.
+ * @param {Array<Object>} products - An array of product objects to render.
+ * @param {Function} [callback] - An optional callback function to execute after rendering.
+ */
+function renderProducts(containerSelector, products, callback) {
     const container = document.querySelector(containerSelector);
     if (!container) {
         console.error(`Product container with selector '${containerSelector}' not found.`);
@@ -41,4 +47,9 @@ function renderProducts(containerSelector, products) {
         `;
         container.appendChild(productCard);
     });
+
+    // Execute the callback function if provided
+    if (callback && typeof callback === 'function') {
+        callback();
+    }
 }
