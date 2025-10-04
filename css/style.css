@@ -1,7 +1,7 @@
 /* Variables de couleurs */
 :root {
     /* Couleurs principales */
-    --background-main: #FFFFFF;    /* Blanc - nouvelle couleur de fond principale */
+    --background-main: #E8D5C4;    /* Nude doux - Fond clair (mode light) */
     --background-dark: linear-gradient(to bottom, #000000, #FFC0CB); /* Fond sombre (mode dark) */
     --text-primary: #000000;       /* Noir pur - texte principal */
     --text-secondary: #6F6A68;     /* Gris rosé - texte secondaire */
@@ -11,14 +11,14 @@
     --border-color: #E8B4A0;       /* Rose Gold - bordures/icônes */
     
     /* Couleurs additionnelles */
-    --white: #FFFFFF;
-    --black: #200E08;
+    --snow: #FFFFFF;
+    --licorice: #000000;
     --light-gray: #FDF9F7;
     --medium-gray: #E0E0E0;
     --dark-gray: #888888;
     
     /* Dégradés */
-    --gradient-gold: linear-gradient(to right, #f4c2c2, #d4a5a5, #e8d5c4, #e8b4a0);
+    --gradient-border: linear-gradient(to right, #f4c2c2 0%, #d4a5a5 25%, #e8d5c4 50%, #e8b4a0 100%);
     --gradient-text: linear-gradient(to right, #f4c2c2, #000000);
 }
 
@@ -38,7 +38,7 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--text-primary);
     line-height: 1.6;
-    background-color: #FFFFFF;
+    background-color: var(--background-main);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,7 +65,7 @@ img {
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--accent-1);
-    color: var(--white);
+    color: var(--snow);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -163,7 +163,7 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--white);
+    background-color: var(--snow);
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -195,7 +195,7 @@ header {
     top: -10px;
     right: -10px;
     background-color: var(--old-rose);
-    color: var(--white);
+    color: var(--snow);
     font-size: 0.7rem;
     width: 18px;
     height: 18px;
@@ -250,7 +250,7 @@ header {
 }
 
 .slide-content {
-    color: var(--white);
+    color: var(--snow);
     text-align: center;
     padding: 20px;
     background: rgba(0, 0, 0, 0.4);
@@ -276,7 +276,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.3);
-    color: var(--white);
+    color: var(--snow);
     border: none;
     width: 50px;
     height: 50px;
@@ -319,7 +319,7 @@ header {
 }
 
 .dot.active {
-    background: var(--white);
+    background: var(--snow);
 }
 
 /* Product Categories */
@@ -338,9 +338,9 @@ header {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    background: var(--white);
+    background: var(--snow);
     border: 1px solid transparent;
-    border-image: linear-gradient(to right, var(--pale-pink), var(--old-rose), var(--nude), var(--rose-gold)) 1;
+    border-image: var(--gradient-border) 1;
 }
 
 .category-card:hover {
@@ -375,7 +375,11 @@ header {
 
 .category-info h3 {
     margin-bottom: 15px;
-    color: var(--old-rose);
+    font-family: 'Bodoni Moda', serif;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 1.5rem;
 }
 
@@ -394,12 +398,12 @@ header {
 
 .buy-btn {
     background-color: var(--old-rose);
-    color: var(--white);
+    color: var(--snow);
 }
 
 .more-btn {
     background-color: var(--light-gray);
-    color: var(--black);
+    color: var(--licorice);
 }
 
 .action-btn:hover {
@@ -430,7 +434,7 @@ header {
 
 .feature h3 {
     margin-bottom: 10px;
-    color: var(--black);
+    color: var(--licorice);
 }
 
 /* Cart Overlay */
@@ -440,7 +444,7 @@ header {
     right: -400px;
     width: 400px;
     height: 100%;
-    background-color: var(--white);
+    background-color: var(--snow);
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 1001;
     transition: right 0.3s ease;
@@ -555,7 +559,7 @@ header {
     width: 100%;
     padding: 12px;
     background-color: #25D366; /* WhatsApp green */
-    color: var(--white);
+    color: var(--snow);
     text-align: center;
     border-radius: 5px;
     font-weight: 500;
@@ -574,7 +578,7 @@ header {
     width: 60px;
     height: 60px;
     background-color: #25D366;
-    color: var(--white);
+    color: var(--snow);
     border-radius: 50%;
     text-align: center;
     font-size: 30px;
@@ -592,8 +596,8 @@ header {
 
 /* Footer */
 footer {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--licorice);
+    color: var(--snow);
     padding: 50px 5% 20px;
 }
 

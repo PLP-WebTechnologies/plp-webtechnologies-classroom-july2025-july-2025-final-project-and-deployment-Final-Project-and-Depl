@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let message = "Salut Charly Shop 👋\n\nJe souhaite commander :\n\n";
         
         cart.forEach(item => {
-            message += `- ${item.name} (${item.quantity}x)\n`;
+            message += `- ${item.name}\n`;
         });
         
         message += "\nPeux-tu me confirmer le prix total et les modalités de livraison ? 😊";

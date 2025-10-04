@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
             left: 50%;
             transform: translateX(-50%);
             background-color: var(--old-rose);
-            color: white;
+            color: var(--snow);
             padding: 12px 25px;
             border-radius: 5px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
