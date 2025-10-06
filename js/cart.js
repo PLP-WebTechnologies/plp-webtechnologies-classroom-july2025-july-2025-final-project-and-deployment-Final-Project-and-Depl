@@ -74,19 +74,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update WhatsApp checkout link with cart details
     function updateCheckoutLink() {
-        let message = "Salut Charly Shop 👋\n\nJe souhaite commander :\n\n";
-        
+        let productList = "";
         cart.forEach(item => {
-            message += `- ${item.name} (${item.quantity}x)\n`;
+            productList += `- ${item.name}\n`;
         });
-        
-        message += "\nPeux-tu me confirmer le prix total et les modalités de livraison ? 😊";
+
+        const message = `Salut Charly Shop 👋\n\nJe souhaite commander :\n\n${productList}\nPeux-tu me confirmer le prix total et les modalités de livraison ? 😊`;
         
         // Encode message for URL
         const encodedMessage = encodeURIComponent(message);
         
         // Update checkout button link
-        checkoutBtn.href = `https://wa.me/1234567890?text=${encodedMessage}`;
+        if (checkoutBtn) {
+            checkoutBtn.href = `https://wa.me/22870838420?text=${encodedMessage}`;
+        }
     }
     
     // Add item to cart
