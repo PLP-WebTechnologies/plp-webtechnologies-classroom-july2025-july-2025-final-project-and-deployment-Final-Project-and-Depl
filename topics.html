@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topics - The Blog Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo"><a href="index.html">The Blog Project</a></div>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <nav class="primary-nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html" aria-current="page">Topics</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+
+        <main class="main-content-area topics-page">
+            <h2>Explore Our Topics</h2>
+            <p>Use the links below to find all posts organized by category. Each link would, in a real application, filter the displayed content.</p>
+
+            <nav class="topic-filter-nav">
+                <a href="#tech" class="cta-button">Tech for Beginners</a>
+                <a href="#lifestyle" class="cta-button">Lifestyle Focus</a>
+                <a href="#faith" class="cta-button">Christian Faith</a>
+            </nav>
+
+            <section id="tech" class="topic-section">
+                <h3>Tech for Beginners</h3>
+                <p>Learn the basics of coding, digital security, and gadget reviews.</p>
+                </section>
+            
+            <section id="lifestyle" class="topic-section">
+                <h3>Lifestyle Focus</h3>
+                <p>Tips for productivity, wellness, and mindful living.</p>
+            </section>
+
+            <section id="faith" class="topic-section">
+                <h3>Christian Faith</h3>
+                <p>Reflections on spiritual growth and connecting faith with modern life.</p>
+            </section>
+
+        </main>
+        
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 The Blog Project. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

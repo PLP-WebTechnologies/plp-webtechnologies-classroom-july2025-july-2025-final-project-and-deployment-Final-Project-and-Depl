@@ -1,0 +1,412 @@
+/* ==================================================================== */
+/* 1. CSS VARIABLES & GLOBAL RESET (The Foundation)                     */
+/* ==================================================================== */
+:root {
+    /* Color Palette */
+    --primary-color: #004D7A; /* Deep Teal/Navy */
+    --accent-color: #FFC300; /* Soft Gold */
+    --background-color: #F5F5F5; /* Off-White */
+    --text-color: #333333; /* Near-Black Gray */
+
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Merriweather', serif;
+
+    --max-width: 1200px;
+    --padding-sm: 1rem;
+    --padding-lg: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease; /* Global transition for all links */
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Global Button/Link Polish */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* ==================================================================== */
+/* 2. HEADER AND NAVIGATION (MOBILE-FIRST)                              */
+/* ==================================================================== */
+.main-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--padding-sm) var(--padding-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-header .logo a {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Mobile Nav - Hidden by default, becomes 'active' via JS */
+.primary-nav {
+    position: fixed;
+    top: 60px; /* Adjust based on likely header height */
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.95);
+    transition: height 0.5s ease-in-out; /* Smooth menu slide */
+}
+
+.primary-nav.active {
+    height: calc(100vh - 60px); 
+}
+
+.primary-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.primary-nav ul li a {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    display: block;
+}
+
+.primary-nav ul li a:hover {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color); 
+}
+
+/* Hamburger Icon Styling - Transition/Transform */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block; 
+    padding: 0;
+    width: 30px; 
+    height: 30px;
+    position: relative; 
+    z-index: 101; 
+}
+
+.hamburger .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Hamburger ACTIVE STATE (The 'X' Transform) */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ==================================================================== */
+/* 3. MAIN LAYOUT CONTAINER (Content Wrapper)                           */
+/* ==================================================================== */
+.content-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--padding-sm);
+    display: flex; 
+    flex-direction: column; /* MOBILE DEFAULT: Stacked vertically */
+}
+
+.main-content-area {
+    padding: var(--padding-sm);
+}
+
+/* ==================================================================== */
+/* 4. SINGLE POST VIEW STYLES (single-post.html)                        */
+/* ==================================================================== */
+.blog-post {
+    padding: var(--padding-sm);
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+/* Sidebar (on mobile, it appears below the main article) */
+.sidebar {
+    background-color: white;
+    padding: var(--padding-sm);
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.sidebar-title {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #ccc;
+}
+
+.post-navigation a {
+    font-weight: 700;
+}
+
+/* ==================================================================== */
+/* 5. HOME/TOPICS/ABOUT PAGE STYLES (index.html, topics.html, about.html) */
+/* ==================================================================== */
+.hero-section {
+    text-align: center;
+    padding: 3rem var(--padding-sm);
+    background-color: white;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.hero-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Style the main Call-to-Action button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--accent-color); 
+    border-radius: 50px; 
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color); 
+    color: var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Home Grid Layout (Mobile Default: Single column) */
+.home-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: var(--padding-sm);
+}
+
+/* Post Card Styling (With Lift Effect) */
+.post-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); 
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth hover transition */
+    transform: translateY(0);
+}
+
+.post-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px); /* Lift effect */
+}
+
+.post-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.post-card h3 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    padding: 0 1rem;
+    margin-top: 1rem;
+}
+.post-card .excerpt {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ==================================================================== */
+/* 6. CONTACT PAGE FORM STYLING (contact.html)                          */
+/* ==================================================================== */
+.form-group {
+    margin-bottom: 1.5rem;
+    width: 100%; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-body); 
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color); 
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 195, 0, 0.5); 
+}
+
+/* Form Validation Feedback Styling */
+.form-group.error label {
+    color: #CC0000; 
+    font-weight: 700;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border: 2px solid #CC0000;
+}
+
+.form-group .error-message {
+    color: #CC0000;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    padding-left: 0.1rem;
+    font-style: italic;
+}
+
+/* ==================================================================== */
+/* 7. SITE WIDE FOOTER                                                  */
+/* ==================================================================== */
+.main-footer {
+    background-color: var(--text-color); 
+    color: white;
+    text-align: center;
+    padding: 2rem var(--padding-lg);
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+.main-footer a {
+    color: var(--accent-color);
+}
+
+
+/* ==================================================================== */
+/* 8. MEDIA QUERIES (Desktop Layouts)                                   */
+/* ==================================================================== */
+
+@media screen and (min-width: 768px) {
+
+    /* Desktop Navigation: Hide hamburger, display horizontal menu */
+    .hamburger {
+        display: none;
+    }
+
+    .primary-nav {
+        position: static;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+    }
+
+    .primary-nav ul {
+        flex-direction: row;
+        padding-top: 0;
+    }
+
+    .primary-nav ul li {
+        margin-left: 2rem;
+    }
+    
+    .primary-nav ul li a {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    /* Single Post Layout: Switch to two columns */
+    .content-wrapper {
+        flex-direction: row; /* Side-by-side */
+    }
+
+    .main-content-area {
+        flex: 3; /* Main content takes up 3 parts */
+        padding-right: var(--padding-lg);
+    }
+
+    .sidebar {
+        flex: 1; /* Sidebar takes up 1 part */
+        margin-top: 0;
+    }
+
+    /* Home Grid: Two columns on Tablet */
+    .home-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: var(--padding-sm);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* Home Grid: Three columns on large Desktop */
+    .home-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

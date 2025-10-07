@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - The Blog Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo"><a href="index.html">The Blog Project</a></div>
+        
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="primary-nav" id="main-nav">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li> 
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+
+        <section class="hero-section">
+            <h1 class="hero-title">Your Guide to Tech, Lifestyle, and Faith</h1>
+            <p class="hero-subtitle">New content published weekly across all three pillars.</p>
+            <a href="topics.html" class="cta-button">Explore All Topics</a>
+        </section>
+
+        <main class="main-content-area home-grid">
+            <h2>Latest Content</h2>
+            
+            <div class="post-card tech-category">
+                <img src="images/Screenshot 1.png" alt="A laptop screen showing code editor, representing technology.">
+                <h3><a href="single-post.html">Mastering Your First Coding Language</a></h3>
+                <p class="excerpt">A guide to choosing a language and setting up your development environment. **[Tech]**</p>
+            </div>
+
+            <div class="post-card faith-category">
+                <img src="images/Screenshot 2.png" alt="A person reading a book with soft light, representing faith and quiet time.">
+                <h3><a href="single-post.html">Finding Peace in the Digital Age</a></h3>
+                <p class="excerpt">How to maintain focus and faith in a world full of digital noise. **[Faith]**</p>
+            </div>
+            
+            <div class="post-card lifestyle-category">
+                <img src="images/Screenshot 4.png" alt="A clean desk with a coffee mug and notebook, representing productivity.">
+                <h3><a href="single-post.html">The 5 Habits of Highly Productive People</a></h3>
+                <p class="excerpt">Simple lifestyle changes that boost energy and focus. **[Lifestyle]**</p>
+            </div>
+        </main>
+        
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 The Blog Project. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
