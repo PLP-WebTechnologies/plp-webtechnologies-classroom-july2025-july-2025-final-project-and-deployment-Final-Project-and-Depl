@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Transform Your Career</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>LearnHub</span>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-item active" data-page="home">
+                    <i class="fas fa-home"></i>
+                    Home
+                </button>
+                <button class="nav-item" data-page="about">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </button>
+                <button class="nav-item" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="homePage" class="page active">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Transform your career</h1>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <i class="fas fa-book-open"></i>
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Courses</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">In Progress</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-trophy"></i>
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Completed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Available Courses Section -->
+        <section class="courses-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Available Courses</h2>
+                    <p>Choose from our selection of professional courses</p>
+                </div>
+                <div id="coursesGrid" class="courses-grid">
+                    <!-- Courses will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="aboutPage" class="page">
+        <section class="page-content">
+            <div class="container">
+                <h2>About LearnHub</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>LearnHub is a comprehensive e-learning platform designed to help you transform your career through high-quality, professional courses. Our mission is to make education accessible, engaging, and effective for learners worldwide.</p>
+                        
+                        <h3>Why Choose LearnHub?</h3>
+                        <ul>
+                            <li>Expert-led courses from industry professionals</li>
+                            <li>Hands-on projects and real-world applications</li>
+                            <li>Flexible learning schedule that fits your lifestyle</li>
+                            <li>Progress tracking and achievement certificates</li>
+                            <li>Community support and peer learning</li>
+                        </ul>
+                        
+                        <h3>Our Mission</h3>
+                        <p>To democratize education and provide everyone with the tools and knowledge needed to succeed in the modern digital economy.</p>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-users"></i>
+                            <p>Join thousands of successful learners</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contactPage" class="page">
+        <section class="page-content">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>Have questions about our courses or need support? We're here to help!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>support@learnhub.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Address</h4>
+                                    <p>123 Learning Street<br>Education City, EC 12345</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="course">Course Information</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="billing">Billing Question</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Course Detail Page -->
+    <div id="courseDetailPage" class="page">
+        <section class="page-content">
+            <div class="container">
+                <button id="backButton" class="back-button">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Courses
+                </button>
+                
+                <div class="course-detail-header">
+                    <h1 id="courseTitle">Course Details</h1>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                        <span id="progressText">0% Complete</span>
+                    </div>
+                </div>
+                
+                <div class="course-detail-content">
+                    <div class="course-info">
+                        <div class="course-description">
+                            <p id="courseDescription"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="lessons-section">
+                        <h3>Course Lessons</h3>
+                        <div id="lessonsList" class="lessons-list">
+                            <!-- Lessons will be dynamically loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="completion-section">
+                        <button id="completeCourseBtn" class="complete-button">
+                            <i class="fas fa-check"></i>
+                            Mark Course as Complete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
