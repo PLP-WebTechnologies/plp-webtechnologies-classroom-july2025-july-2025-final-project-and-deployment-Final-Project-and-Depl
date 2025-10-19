@@ -40,10 +40,12 @@
             </ul>
         </nav>
         <div class="cart-icon">
-            <a href="#" id="cart-btn"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            <a href="#" id="cart-btn" aria-label="Voir le panier"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
         </div>
         <div class="mobile-menu">
-            <i class="fas fa-bars"></i>
+            <button aria-label="Ouvrir le menu de navigation">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
@@ -76,8 +78,8 @@
             </div>
         </div>
         <div class="slider-controls">
-            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            <button class="prev-btn" aria-label="Slide précédente"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn" aria-label="Slide suivante"><i class="fas fa-chevron-right"></i></button>
         </div>
         <div class="slider-dots">
             <span class="dot active" data-slide="0"></span>
@@ -189,7 +191,7 @@
         <div class="cart-container">
             <div class="cart-header">
                 <h2>Votre Panier</h2>
-                <button id="close-cart"><i class="fas fa-times"></i></button>
+                <button id="close-cart" aria-label="Fermer le panier"><i class="fas fa-times"></i></button>
             </div>
             <div class="cart-items" id="cart-items">
                 <!-- Les articles du panier seront ajoutés ici dynamiquement -->
@@ -198,7 +200,7 @@
                 <div class="cart-total">
                     <p>Total: <span id="cart-total-price">0</span> FCFA</p>
                 </div>
-                <a href="#" class="checkout-btn" id="checkout-btn">
+                <a href="#" class="checkout-btn" id="checkout-btn" aria-label="Passer la commande sur WhatsApp">
                     <i class="fab fa-whatsapp"></i> C'est parti !
                 </a>
             </div>
@@ -206,7 +208,7 @@
     </div>
 
     <!-- Bouton WhatsApp flottant -->
-    <a href="https://wa.me/22870838420" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/22870838420" class="whatsapp-float" target="_blank" aria-label="Contacter-nous sur WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -233,9 +235,9 @@
             <div class="footer-social">
                 <h3>Suivez-nous</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/22870838420"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Visitez notre page Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Visitez notre page Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/22870838420" aria-label="Contactez-nous sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
