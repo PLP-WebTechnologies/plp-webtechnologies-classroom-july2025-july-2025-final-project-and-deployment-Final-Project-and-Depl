@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="authour" content="Abdulsalam">
+  <meta name="description" content="Contact AgroNigeria — partner with us, request services or ask about training programmes." />
+  <title>Contact — AgroNigeria</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">AgroNigeria</a>
+      <button id="nav-toggle-5" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-5">
+        <span class="hamburger"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav id="primary-nav-5" class="primary-nav" aria-label="Main navigation">
+        <ul>
+        <li><a href="Project1.html">Home</a></li>
+          <li><a href="project2.html">About</a></li>
+          <li><a href="project3.html">Services</a></li>
+          <li><a href="project4.html">Resources</a></li>
+          <li><a href="project5.html"  class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container contact" aria-labelledby="contact-title">
+      <h1 id="contact-title">Contact us</h1>
+      <p>Send us a message for partnership enquiries, training requests or resources.</p>
+
+      <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+        <div class="field-row">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+
+        <div class="field-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+
+        <div class="field-row">
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" pattern="^[0-9+()\-\s]{7,20}$">
+        </div>
+
+        <div class="field-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <div class="field-row">
+          <button class="btn primary" type="submit">Send message</button>
+        </div>
+
+        <div id="form-feedback" role="status" aria-live="polite" class="form-feedback"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h3>AgroNigeria</h3><p>Practical solutions for sustainable agriculture across Nigeria.</p></div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav">
+          <li><a href="project2.html">About</a></li>
+          <li><a href="project3.html">Services</a></li>
+          <li><a href="project4.html">Resources</a></li>
+          <li><a href="project5.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4>Contact</h4>
+        <p>Email: bdulsalambello12@gmail.com<br>Phone: +234 70 4625 2092</p>
+      </div>
+    </div>
+    <div class="container footer-bottom"><small>© <span id="year-5"></span> AgroNigeria</small></div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
