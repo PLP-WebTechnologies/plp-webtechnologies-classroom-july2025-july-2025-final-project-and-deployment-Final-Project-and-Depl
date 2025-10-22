@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levites Farm | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Consistent Green Theme (copied from Learn More page) */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8fdf8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #388e3c;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 15px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #1b5e20;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 50px 10%;
+      text-align: center;
+    }
+
+    h2, h3 {
+      color: #2e7d32;
+    }
+
+    .hero {
+      background: url("https://images.unsplash.com/photo-1589643519208-3b2d03e85633?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 10%;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      margin: 20px 0;
+    }
+
+    .hero a {
+      background: #1b5e20;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .hero a:hover {
+      background: #2e7d32;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature h3 {
+      color: #2e7d32;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Levites Farm</h1>
+    <p>Natural. Sustainable. Proudly Kenyan.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="learnmore.html">Learn More</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Welcome to Levites Farm</h1>
+    <p>Dedicated to raising healthy, happy ducks — naturally and sustainably in Machakos County, Kenya.</p>
+    <a href="learnmore.html">Learn More</a>
+  </section>
+
+  <section>
+    <h2>Why Choose Levites Farm?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>🐣 Ethical Farming</h3>
+        <p>We believe in raising ducks with care, providing a clean, free-range environment where they thrive naturally.</p>
+      </div>
+      <div class="feature">
+        <h3>🌿 Sustainable Practices</h3>
+        <p>Our approach maintains balance with the environment — ensuring long-term sustainability and ecosystem health.</p>
+      </div>
+      <div class="feature">
+        <h3>🥚 Quality Produce</h3>
+        <p>From nutrient-rich eggs to premium meat, Levites Farm delivers only the best to your table.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Levites Farm | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

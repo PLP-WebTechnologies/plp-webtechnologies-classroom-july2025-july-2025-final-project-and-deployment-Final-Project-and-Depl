@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levites Farm | Learn More</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Keep consistent green theme */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8fdf8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #388e3c;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 15px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #1b5e20;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 50px 10%;
+    }
+
+    h2, h3 {
+      color: #2e7d32;
+      text-align: center;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .farm-image {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .duck-breeds {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .duck-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .duck-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .duck-card img {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .team {
+      background-color: #eef7ee;
+      padding: 50px 10%;
+      text-align: center;
+      border-top: 2px solid #c8e6c9;
+    }
+
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .team-member {
+      background: white;
+      border-radius: 10px;
+      width: 280px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-8px);
+    }
+
+    .team-member img {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .team-member h4 {
+      margin-top: 10px;
+      color: #2e7d32;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Levites Farm</h1>
+    <p>Natural. Sustainable. Proudly Kenyan.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="learnmore.html" class="active">Learn More</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>About Levites Farm</h2>
+    <p>Located in the serene environment of <strong>Masii, Machakos County, Kenya</strong>, Levites Farm is a thriving duck farm dedicated to sustainable, healthy, and ethical duck farming. Our goal is to provide premium quality ducks and eggs while maintaining a balance with nature.</p>
+
+    <img src="https://images.unsplash.com/photo-1589643519208-3b2d03e85633?auto=format&fit=crop&w=1200&q=80" alt="Levites Farm" class="farm-image">
+
+    <h3>Our Duck Breeds</h3>
+    <p>At Levites Farm, we raise a variety of ducks suited for both meat and egg production. Each breed is nurtured naturally and with utmost care.</p>
+
+    <div class="duck-breeds">
+      <div class="duck-card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Pekin Duck">
+        <h4>Pekin Ducks</h4>
+        <p>Known for their calm nature and delicious meat.</p>
+        <p><strong>Male:</strong> 4.5 kg | <strong>Female:</strong> 3.8 kg</p>
+      </div>
+
+      <div class="duck-card">
+        <img src="https://images.unsplash.com/photo-1604424480377-1d1e0c6d11e1?auto=format&fit=crop&w=800&q=80" alt="Khaki Campbell">
+        <h4>Khaki Campbell</h4>
+        <p>Excellent egg layers producing up to 300 eggs yearly.</p>
+        <p><strong>Male:</strong> 2.6 kg | <strong>Female:</strong> 2.3 kg</p>
+      </div>
+
+      <div class="duck-card">
+        <img src="https://images.unsplash.com/photo-1615198759968-7f52c4dbf06e?auto=format&fit=crop&w=800&q=80" alt="Muscovy Duck">
+        <h4>Muscovy Ducks</h4>
+        <p>Strong and healthy ducks ideal for free-range systems.</p>
+        <p><strong>Male:</strong> 5.5 kg | <strong>Female:</strong> 3.0 kg</p>
+      </div>
+    </div>
+
+    <h3>Farm Location</h3>
+    <p>Our farm is situated in <strong>Masii, Machakos County</strong> — a peaceful environment ideal for duck farming, surrounded by nature and clean water sources.</p>
+
+    <iframe
+      src="https://www.google.com/maps?q=Masii,+Machakos+County,+Kenya&output=embed"
+      width="100%"
+      height="300"
+      style="border-radius:10px; border:none;">
+    </iframe>
+  </section>
+
+  <section class="team">
+    <h2>Meet Our Team</h2>
+    <p>The dedicated people behind Levites Farm’s success.</p>
+
+    <div class="team-container">
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80" alt="Gloria Muema">
+        <h4>Gloria Muema</h4>
+        <p><strong>Farm Manager</strong></p>
+        <p>Oversees operations, ensures animal welfare, and manages daily farm activities.</p>
+      </div>
+
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Daniel Muli">
+        <h4>Daniel Muli</h4>
+        <p><strong>Head of Breeding</strong></p>
+        <p>Focuses on genetic improvement and maintaining healthy breeding lines.</p>
+      </div>
+
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Mary Wambua">
+        <h4>Mary Wambua</h4>
+        <p><strong>Veterinary Officer</strong></p>
+        <p>Ensures all ducks are healthy and vaccinated regularly for disease prevention.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Levites Farm | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
