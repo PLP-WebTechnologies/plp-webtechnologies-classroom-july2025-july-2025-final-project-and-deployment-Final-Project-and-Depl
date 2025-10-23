@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Site — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MySite</a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation" title="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Build. Ship. Shine.</h1>
+          <p>Responsive multipage website demo combining HTML, CSS & JavaScript.</p>
+          <p><a class="btn" href="services.html">See Services</a> <a class="btn btn-outline" href="contact.html">Contact</a></p>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <img src="assets/images/hero.jpg" alt="Illustration or screenshot">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="container features">
+      <article class="card">
+        <h3>Responsive</h3>
+        <p>Designed to look great on phones, tablets and desktops.</p>
+      </article>
+      <article class="card">
+        <h3>Accessible</h3>
+        <p>Semantic HTML and keyboard-friendly navigation.</p>
+      </article>
+      <article class="card">
+        <h3>Interactive</h3>
+        <p>Menu toggle and form validation handled with vanilla JS.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> MySite — Built for the final assignment</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

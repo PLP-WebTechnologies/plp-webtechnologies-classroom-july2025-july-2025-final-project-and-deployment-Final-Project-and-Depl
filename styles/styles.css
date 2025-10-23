@@ -1,0 +1,62 @@
+:root{
+  --max-width:1100px;
+  --gap:1.25rem;
+  --accent:#0b76ef;
+  --muted:#666;
+  --bg:#fff;
+  --radius:12px;
+  --pad:1rem;
+  font-size:16px;
+}
+*{box-sizing:border-box}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  margin:0;
+  color:#111;
+  background:#f7f7fb;
+  line-height:1.5;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0;
+}
+.logo{font-weight:700;text-decoration:none;color:inherit}
+.site-nav{display:flex;gap:1rem}
+.site-nav a{color:inherit;text-decoration:none;padding:0.5rem;border-radius:6px}
+.site-nav a:hover{background:rgba(0,0,0,0.05)}
+.menu-toggle{display:none;background:none;border:0;padding:0.2rem}
+.hamburger{display:block;width:22px;height:2px;background:#111;position:relative}
+.hamburger::after,.hamburger::before{content:"";position:absolute;left:0;height:2px;width:22px;background:#111}
+.hamburger::before{top:-7px}.hamburger::after{top:7px}
+
+.hero{padding:3rem 0;background:linear-gradient(180deg,#fff,#fbfdff)}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+.hero-image img{max-width:100%;border-radius:12px;display:block}
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+.btn-outline{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:2rem 0}
+.card{background:var(--bg);padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(10,10,10,0.04)}
+
+.page-intro{padding:2rem 0}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+
+.grid.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+
+.site-footer{padding:1.25rem 0;text-align:center;color:var(--muted);font-size:0.95rem;margin-top:2rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .features{grid-template-columns:repeat(1,1fr)}
+  .skills-grid{grid-template-columns:repeat(1,1fr)}
+}
+@media (max-width:720px){
+  .site-nav{position:absolute;top:64px;right:0;background:#fff;border-left:1px solid #eee;flex-direction:column;padding:1rem;display:none}
+  .site-nav.show{display:flex}
+  .menu-toggle{display:block}
+}
+label{display:block;margin:0.5rem 0}
+input,textarea{width:100%;padding:0.6rem;border:1px solid #ddd;border-radius:8px}
+.form-actions{margin-top:0.5rem}

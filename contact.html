@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Site — Contact</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MySite</a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation" title="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact</h1>
+    <form id="contact-form" class="contact-form" novalidate>
+      <label>
+        Name
+        <input type="text" name="name" id="name" required minlength="2" />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" id="email" required />
+      </label>
+      <label>
+        Message
+        <textarea name="message" id="message" rows="6" required minlength="10"></textarea>
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="btn">Send</button>
+      </div>
+      <p id="form-status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> MySite</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
