@@ -1,0 +1,397 @@
+/* === GOOGLE FONT IMPORT === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* === CSS VARIABLES (LIGHT THEME BY DEFAULT) === */
+:root {
+    --primary-color: #0a4a91;
+    --secondary-color: #007bff;
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --white-color: #ffffff;
+    --success-color: #28a745;
+    
+    /* THEME-ABLE COLORS */
+    --color-text: #333;
+    --color-bg: #f9f9f9;
+    --color-card-bg: #ffffff;
+    --color-header-bg: #ffffff;
+    --color-border: #ddd;
+    --color-shadow: rgba(0,0,0,0.1);
+    
+    --font-family: 'Poppins', Arial, sans-serif;
+    --container-width: 960px;
+}
+
+/* === DARK MODE THEME === */
+body.dark-mode {
+    --primary-color: #00aaff;
+    --secondary-color: #0088cc;
+    --dark-color: #f4f4f4;
+    --light-color: #333;
+    --white-color: #1e1e1e;
+
+    /* THEME-ABLE COLORS */
+    --color-text: #e0e0e0;
+    --color-bg: #121212;
+    --color-card-bg: #1e1e1e;
+    --color-header-bg: #1e1e1e;
+    --color-border: #444;
+    --color-shadow: rgba(255,255,255,0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* === GENERAL STYLES === */
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === PAGE-SPECIFIC BACKGROUNDS === */
+body.home-page {
+    /* TODO: Get a 'success-bg.jpg' and put it in assets/images/ */
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../assets/images/success-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+}
+body.connections-page {
+    /* TODO: Get a 'social-bg.jpg' and put it in assets/images/ */
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../assets/images/social-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+}
+/* Dark mode background blends */
+body.dark-mode.home-page,
+body.dark-mode.connections-page {
+     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../assets/images/success-bg.jpg');
+}
+
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* === HEADER, NAVIGATION, AND THEME TOGGLE === */
+.site-header {
+    background-color: var(--color-header-bg);
+    box-shadow: 0 2px 5px var(--color-shadow);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.main-nav { position: relative; }
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+.nav-menu li { margin-left: 1.5rem; }
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 4px;
+    position: relative;
+    width: 50px;
+    height: 28px;
+}
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.theme-toggle .icon-sun { 
+    left: 6px; 
+    opacity: 0;
+}
+.theme-toggle .icon-moon { 
+    right: 6px; 
+    opacity: 1;
+}
+/* Dark mode toggle state */
+body.dark-mode .theme-toggle .icon-sun { opacity: 1; }
+body.dark-mode .theme-toggle .icon-moon { opacity: 0; }
+
+/* Hamburger Menu */
+.nav-toggle { display: none; /* ... (rest of hamburger styles) ... */ }
+/* ... (Rest of hamburger and responsive menu styles from before) ... */
+
+
+/* === HERO SECTION === */
+.hero {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    padding: 6rem 0;
+    text-align: center;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+.hero-subtitle { font-size: 1.5rem; margin-bottom: 2rem; }
+.typing-effect { font-weight: 700; color: #ffd700; }
+
+/* === BUTTONS === */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+}
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+.cta-button.secondary {
+    background: none;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+.cta-button.secondary:hover {
+    background: var(--secondary-color);
+    color: var(--white-color);
+    box-shadow: none;
+}
+
+/* === GENERAL PAGE STYLES === */
+.page-content, .home-about, .featured-projects, .about-section, .whatsapp-section, .google-form-section {
+    padding: 2.5rem 1.5rem;
+    background: var(--color-card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--color-shadow);
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+}
+.container.page-content { min-height: 60vh; }
+h1, h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* === PROJECT GRID & TROPHY === */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.project-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--color-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For the trophy */
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--color-shadow);
+}
+.project-card .project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #eee;
+}
+/* NEW: Trophy Icon */
+.project-card .trophy-icon {
+    /* TODO: Get a 'trophy.png' and put it in assets/icons/ */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 215, 0, 0.8);
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 2;
+}
+/* ... (rest of project card styles from before) ... */
+
+
+/* === NEW: ANIMATED SKILLS LIST (ABOUT PAGE) === */
+.skills-list-animated {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 0;
+}
+.skill-item {
+    background: var(--color-bg);
+    color: var(--color-text);
+    padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    
+    /* Animation properties */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+/* This class will be added by JavaScript when element is in view */
+.skill-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === NEW: CONNECTIONS PAGE STYLES === */
+.connection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    align-items: start;
+    margin-top: 1rem;
+}
+
+.connection-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px var(--color-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.connection-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px var(--color-shadow);
+}
+
+.whatsapp-section {
+    text-align: center;
+    background: var(--color-card-bg);
+}
+.whatsapp-button {
+    background: #25D366; /* WhatsApp Green */
+    color: white;
+}
+.whatsapp-button:hover {
+    background: #128C7E;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.google-form-section {
+    background: var(--color-card-bg);
+}
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 125%; /* Aspect ratio for tall forms */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* === CONTACT FORM (Themed) === */
+.contact-form { max-width: 600px; }
+.form-group { margin-bottom: 1rem; }
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    font-family: inherit;
+    background: var(--color-bg);
+    color: var(--color-text);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+/* ... (rest of form validation styles) ... */
+
+/* === FOOTER === */
+.site-footer {
+    background-color: var(--color-header-bg);
+    color: var(--color-text);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--color-border);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    /* ... (All responsive styles from before) ... */
+    
+    /* Ensure toggle button is visible */
+    .theme-toggle {
+        margin-left: 1rem;
+    }
+    
+    .nav-menu li {
+        margin-left: 0; /* Already 0 in your previous code */
+    }
+}
