@@ -10,7 +10,7 @@ A responsive, multi-page website for Jijue Hospital showcasing medical services,
 - Demonstrate modern web development practices
 
 ## 🌐 Live Website
-**Live URL:** [https://fascinating-cucurucho-0fe2f2.netlify.app](https://jijue.netlify.app/)
+**Live URL:** https://jijue.netlify.app/
 
 ## 🏗️ Project Structure
 jijue-hospital/
