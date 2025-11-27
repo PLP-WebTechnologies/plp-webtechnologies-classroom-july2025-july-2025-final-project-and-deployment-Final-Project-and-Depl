@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Delish Restaurant</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Delish</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </nav>
+  </header>
+
+  <section class="contact">
+    <h2 class="fade-in">For Any Assistance</h2>
+    <h2 class="fade-in">Contact Us</h2>
+    <form class="contact-form fade-in" onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <h2 class="fade-in">Your Satisfaction is our Priority</h2>
+  </section>
+   
+  <div class="social-links">
+  <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+
+
+  <footer>
+    <p>© 2025 Delish Restaurant</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
