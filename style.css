@@ -1,0 +1,18 @@
+/* Reset & basic styling */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+header, footer { background-color: #333; color: #fff; padding: 10px; text-align: center; }
+nav ul { list-style: none; padding: 0; display: flex; justify-content: center; }
+nav ul li { margin: 0 15px; }
+nav ul li a { color: white; text-decoration: none; transition: color 0.3s ease; }
+nav ul li a:hover { color: #4caf50; }
+
+/* Main content */
+#intro { text-align: center; padding: 50px 20px; }
+button { padding: 10px 20px; cursor: pointer; transition: transform 0.3s ease; }
+button:hover { transform: scale(1.1); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul { flex-direction: column; }
+  nav ul li { margin: 10px 0; }
+}
