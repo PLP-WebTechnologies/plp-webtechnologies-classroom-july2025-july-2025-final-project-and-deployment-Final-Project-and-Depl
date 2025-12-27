@@ -1,90 +1,69 @@
-# 📦 Final Assignment: Build, Organize, and Deploy a Multipage Website
+# Charly Shop
 
-You're now ready to bring everything together—HTML, CSS, JavaScript, planning, structure, and deployment. This final project challenges you to **conceptualize, build, and deploy a multi-page website** that is responsive, interactive, and ready for the real world.
+Bienvenue sur Charly Shop, une boutique en ligne élégante spécialisée dans les accessoires de mode et les vêtements pour hommes et femmes. Ce projet est une application web front-end pure, conçue pour offrir une expérience utilisateur fluide et moderne.
+https://charly-shop.vercel.app/
 
-This assignment will guide you from planning your site all the way to deploying it online. Let’s make your project *production-worthy*! 🚀
+## Description
 
----
+Charly Shop est une plateforme de e-commerce qui met en avant des collections soigneusement sélectionnées. Les principales fonctionnalités incluent :
 
-## 🌐🎯 Part 1: Planning and Organizing a Multipage Website
+- **Navigation Intuitive** : Une interface claire avec des pages dédiées pour les collections hommes et femmes.
+- **Galeries de Produits** : Des pages de produits dynamiques avec des galeries d'images et des descriptions détaillées.
+- **Panier d'Achat Interactif** : Un panier d'achat accessible depuis n'importe quelle page, permettant aux utilisateurs d'ajouter, de modifier et de supprimer des articles.
+- **Intégration WhatsApp** : Un processus de commande finalisé via une redirection vers WhatsApp avec un message pré-rempli.
 
-Before you write any code, take time to plan:
+## Comment Lancer le Projet
 
-* Define your website's purpose (portfolio, product showcase, blog, etc.)
-* Outline 3–5 pages (e.g., Home, About, Services, Contact, Gallery)
-* Sketch or describe the layout of each page
-* Map out internal navigation (how pages link to one another)
+Ce projet ne nécessite pas de backend ni de processus de build complexe. Pour le lancer, suivez ces étapes simples :
 
-**Goal:** Show intentional structure and user journey across the site.
+1. **Clonez le Dépôt** :
 
----
+   ```bash
+   git clone https://github.com/your-username/charly-shop.git
+   ```
 
-## 🌍💻 Part 2: Build the Website Using HTML5, CSS, and JavaScript
+2. **Ouvrez le Fichier `index.html`** :
 
-Using your plan, begin building:
+   - Naviguez jusqu'au répertoire du projet.
+   - Ouvrez le fichier `index.html` directement dans votre navigateur web.
 
-* Use HTML5 for semantic structure
-* Apply CSS for responsive layout, styling, and animations
-* Use JavaScript to add interactivity (menus, forms, toggles, dynamic content)
+Et voilà ! Le site devrait être entièrement fonctionnel.
 
-Each page should:
+## Structure des Fichiers
 
-* Be mobile-responsive
-* Share a consistent layout/header/footer
-* Include at least one interactive element (e.g., form validation, toggle menu, animation on scroll)
+Le projet est organisé de manière logique pour séparer les différentes préoccupations (HTML, CSS, JavaScript).
 
-**Goal:** Integrate everything you’ve learned in a cohesive, functioning project.
+```
+.
+├── css/
+│   ├── style.css         # Styles globaux du site
+│   └── responsive.css    # Styles pour les appareils mobiles
+│
+├── images/
+│   └── products/         # Contient les images des produits
+│       ├── femmes/
+│       └── hommes/
+│
+├── js/
+│   ├── cart.js           # Gère la logique du panier d'achat
+│   ├── main.js           # Scripts principaux (menu, notifications, etc.)
+│   ├── products.js       # Contient les données des produits
+│   ├── renderProducts.js # Fonction pour afficher les produits dynamiquement
+│   ├── page-specific.js  # Scripts spécifiques à chaque page
+│   ├── product-slider.js # Gère les sliders de produits
+│   └── navbar.js         # Logique pour la barre de navigation
+│
+├── contact.html          # Page de contact
+├── femmes.html           # Page des produits pour femmes
+├── hommes.html           # Page des produits pour hommes
+├── index.html            # Page d'accueil
+└── produits.html         # Page de présentation des catégories
+```
 
----
+## Technologies Utilisées
 
-## 🛠️🚀 Part 3: Best Practices for Code Organization
+- **HTML5**
+- **CSS3** (avec des variables pour une gestion facile des thèmes)
+- **JavaScript (ES6+)**
 
-Before deployment, refactor your project to follow production-friendly practices:
-
-* Organize files in folders (`/css`, `/js`, `/images`, etc.)
-* Write clean, modular, and commented code
-* Use meaningful file names and relative paths
-* Validate your HTML/CSS and test on different screen sizes
-
-**Goal:** Prepare your codebase to be readable, maintainable, and scalable.
-
----
-
-## 🌐🚀 Part 4: Introduction to Hosting and Deployment
-
-Once your project is complete, choose a method to **host your site online**.
-
-You can use:
-
-* **GitHub Pages** (great for portfolios and static sites)
-* **Netlify** (powerful CI/CD features and easy form support)
-* **Vercel** (lightning-fast deployment for frontend projects)
-
-Deploy your project and confirm that:
-
-* All links and scripts work
-* It loads properly on mobile and desktop
-* It has a clear, shareable URL
-
-**Goal:** Publish your work online and make it accessible to the world.
-
----
-
-## Deliverables
-
-1. A GitHub repository containing:
-
-   * Your complete project code, properly organized
-   * A `README.md` file explaining your project purpose, structure, and live URL
-2. A live deployed website (hosted via GitHub Pages, Netlify, or Vercel)
-
----
-
-## Outcome
-
-* Clarity and thoroughness of planning documentation
-* Proper use of HTML5, CSS, and JavaScript across multiple pages
-* Responsive and accessible design
-* Clean, well-organized, and commented code
-* Successful live deployment with a working link
-* Evidence of following best practices
+Aucune dépendance externe n'est requise, à l'exception des polices Google Fonts et de Font Awesome pour les icônes. 
